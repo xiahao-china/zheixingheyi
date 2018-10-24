@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>"知行合一"智能助学</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+<!--页头部分-->
+<div id="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 col-sm-9 col-xs-9">
+                <img class="img-circle header-img header-set" src="img/seize.jpg" />
+                <h1 class="header-set header-h1-set"><b>"知行合一"智能助学</b></h1>
+                <embed src="svg/tree.svg" class="tree"/>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-3 ">
+                <table>
+                    <tr>
+                        <td class="header-delive header-td">
+                            <a class="btn header-btn-set btn-login" data-toggle="modal" data-target="#login"><h3 class="header-h3-set"><b>登录</b></h3></a>
+                            <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">欢迎登录</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="form-inline">
+                                                <embed src="svg/account.svg" class="login_svg" />
+                                                <input class="form-control login_input_set" type="text" id="login_account" name="login_account" onclick="clear_text('login_account')" onblur="check_account('login_account','login_account_check_end')" value="请输入账号"/><span id="login_account_check_end"></span><br /><br />
+                                                <h4 id="disregist"><small>没账号?<a href="regist.html">去注册</a></small></h4><br />
+                                                <embed src="svg/key.svg" class="login_svg" />
+                                                <input class="form-control login_input_set" type="text" id="login_account_key" name="login_account_key" onclick="clear_text('login_account_key')" onblur="check_account_key('login_account_key','login_account_key_end')" value="请输入密码" /><span id="login_account_key_end"></span><br /><br />
+                                                <h4 id="forget"><small><a href="#">忘记密码?</a></small></h4><br />
+                                                <embed src="svg/verification.svg" class="login_svg" />
+                                                <input class="form-control login_input_vp_set" type="text" id="login_check" name="login_check" onclick="clear_text('login_check')" onblur="check_Verification_code('login_check','verification_check_end')" value="请输入验证码" /><span id="verification_check_end"></span>
+                                                <span class="Verification_position" ><canvas class="pull-left" onclick="drawPic()" id="canvase" width="120" height="45"></canvas></span><br /><br />
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary">登录</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                        </div>
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal -->
+                            </div>
+                        </td>
+                        <td class="header-td"><a class="btn header-btn-set" href="regist.html"><h3 class="header-h3-set"><b>注册</b></h3></a></td></tr>
+                    <tr><td colspan="2"><input id="find" type="text" onclick="clear_text('find')" class="form-control input-sm col-md-10 find-style" value="搜索你感兴趣的知识"/></td><td><img class="enlarge" src="img/enlarge.png" /></td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--页面主体-->
+<div class="main">
+    <!--左侧导航栏-->
+    <div class="left-navigation navbar-fixed-top">
+        <div class="left-navigation-bg">
+            <a id="mobile-nav-a" class="left-off" onclick="open_left()" data-toggle="modal" data-target="#left-modal">
+                <img id="mobile-nav-taggle"  class="left-navigation-label center-block" src="img/open.png" />
+            </a>
+            <div id="mobile-menu" class="mobile-nav hide-nav">
+                <ul class="mobile-menu-ul">
+                    <li class="mobile-menu-turn-off text-right" onclick="open_left()"><span class="glyphicon glyphicon-chevron-left"></span></li>
+                    <li class="dropdown-header"><h3>分类</h3></li>
+                    <li><a class="mobile-menu-a" href="#">大致分类1</a></li>
+                    <li><a href="#">大致分类2</a></li>
+                    <li><a href="#">大致分类3</a></li>
+                    <li><a href="#">大致分类4</a></li>
+                    <li><a href="#">大致分类5</a></li>
+                    <li><a href="#">大致分类6</a></li>
+                    <li><a href="#">大致分类7</a></li>
+                    <li><a href="#">大致分类8</a></li>
+                    <li class="panel-group">
+                        <a href="#more" class="panel panel-default panel-heading more-bg" data-toggle="collapse" data-parent="#accordion">更多<span class="caret"></span></a>
+                        <ul id="more" class="panel-collapse collapse in panel-more">
+                            <li><a href="#">大致分类9</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--页面主体-->
+    <div class="container">
+        <!--页面主体头部-->
+        <div class="main_top">
+            <div class="col-md-12 col-sm-12 col-sm-12">
+                <div class="row md-top-bg">
+                    <div id="seize-a-seat-1" class="col-md-2 "></div>
+                    <div id="seize-a-seat-2" class="col-md-8 col-sm-12 col-sm-12">
+                        <div id="myCarousel" class="carousel slide col-md-12 col-sm-12 md-top-zindex" data-ride="carousel" >
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+                                <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+                            </ol>
+                            <div class="carousel-inner md-top-zindex"  role="listbox">
+                                <div class="item active md-top-zindex">
+                                    <div class="md-top-img">
+                                        <div class="md-top-zindex"><img class="second-slide center-block" src="img/bg-03.jpg" alt="Second slide"/></div>
+
+                                    </div>
+                                    <div class="carousel-caption">
+                                        <h1>Unity of <span class="text-blue">Knowledge</span></h1><br />
+                                        <p><a class="btn btn-lg carousel-btn" href="#" role="button">了解更多</a></p>
+                                    </div>
+                                </div>
+                                <div class="item md-top-img md-top-zindex">
+                                    <div class="md-top-zindex"><img class="second-slide center-block" src="img/bg.jpg" alt="Second slide"/></div>
+                                </div>
+                                <div class="item md-top-img md-top-zindex">
+                                    <div class="md-top-zindex"><img class="second-slide center-block" src="img/seize.jpg" alt="Second slide"/></div>
+                                </div>
+                            </div>
+                            <a class="left carousel-control md-top-zindex" href="#myCarousel" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control md-top-zindex" href="#myCarousel" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--页面主体中部-->
+        <div class="main_middle" onmousedown="Drag_switch_first()" onmouseup="Drag_switch_second()">
+            <div class="col-md-12 tree_title">
+                <h1><span><img src="img/comment-icon.png" alt=""></span>&ensp;推荐知识树</h1>
+            </div>
+            <div id="tree_carousel" class="col-md-12 slide carousel col-xs-12">
+                <div id="carousel_Curtain" class="carousel-inner" ondragstart="return false">
+                    <div class="item active">
+                        <div class="col-md-2 col-xs-6 ">
+                            <img src="img/md-bg1.jpg" class="col-md-12 col-xs-12" alt="">
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <img src="img/md-bg1.jpg"  class="col-md-12 col-xs-12" alt="">
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <img src="img/md-bg2.jpg" class="col-md-12 col-xs-12" alt="">
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <img src="img/md-bg2.jpg" class="col-md-12 col-xs-12" alt="">
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <img src="img/md-bg1.jpg" class="col-md-12 col-xs-12" alt="">
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <img src="img/md-bg1.jpg"  class="col-md-12 col-xs-12" alt="">
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="col-md-2 col-xs-6 ">
+                            <img src="img/md-bg2.jpg" class="col-md-12 col-xs-11" alt="">
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <img src="img/md-bg2.jpg"  class="col-md-12 col-xs-11" alt="">
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <img src="img/md-bg1.jpg" class="col-md-12 col-xs-11" alt="">
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <img src="img/md-bg1.jpg" class="col-md-12 col-xs-11" alt="">
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <img src="img/md-bg2.jpg" class="col-md-12 col-xs-11" alt="">
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <img src="img/md-bg2.jpg"  class="col-md-12 col-xs-11" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-md-2 col-xs-6 ">
+                            <img src="img/md-bg1.jpg" class="col-md-12 col-xs-11" alt="">
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <img src="img/md-bg1.jpg"  class="col-md-12 col-xs-11" alt="">
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <img src="img/md-bg2.jpg" class="col-md-12 col-xs-11" alt="">
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <img src="img/md-bg2.jpg" class="col-md-12 col-xs-11" alt="">
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <img src="img/md-bg1.jpg" class="col-md-12 col-xs-11" alt="">
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <img src="img/md-bg1.jpg"  class="col-md-12 col-xs-11" alt="">
+                        </div>
+                    </div>
+                    <a class="right carousel-control" href="#tree_carousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+                </div>
+                
+            </div>
+        </div>
+
+        <!--页面主体底部-->
+        <div class="main_bottom comment">
+            <div class="col-md-12 comment_title ">
+                <h1><span><img src="img/comment-icon.png" alt=""></span>&ensp;精彩评论区</h1>
+            </div>
+            <div id="carousel" class="col-md-10 col-md-offset-1 carousel slide carousel-float pull-left col-xs-11 ">
+                <!--<ol class="carousel-indicators">-->
+                    <!--<li data-target="#carousel" data-slide-to="0" class="active"></li>-->
+                    <!--<li data-target="#carousel" data-slide-to="1"></li>-->
+                    <!--<li data-target="#carousel" data-slide-to="2"></li>-->
+                <!--</ol>-->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="col-md-6 col-xs-11">
+                            <div class="innerleft col-md-11 col-xs-12"></div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="col-md-6 col-xs-11">
+                            <div class="innerright col-md-11 col-xs-12"></div>
+                             <div class="col-md-1"></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-md-6 col-xs-11">
+                            <div class="innerleft col-md-11 col-xs-12"></div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="col-md-6 col-xs-11">
+                            <div class="innerright col-md-11 col-xs-12"></div>
+                            <div class="col-md-1"></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-md-6 col-xs-11">
+                            <div class="innerleft col-md-11 col-xs-12"></div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="col-md-6 col-xs-11">
+                            <div class="innerright col-md-11 col-xs-12"></div>
+                            <div class="col-md-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <a class="right carousel-control right-next" href="#carousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+    </div>
+</div>
+</div>
+<!--页脚部分   ver1.0-->
+<div id="footer">
+    <div class="container">
+        <div class="left">
+            <div class="col-md-6 col-xs-12 ">
+                <div class="footer_item">
+                    <p><span><i class="glyphicon glyphicon-copyright-mark"></i>&nbsp;Copyright:广东海洋大学创数软件团队</span>
+                </div>
+                <div class="footer_item">
+                    <p><span><i class="glyphicon glyphicon-map-marker"></i>&nbsp;Adress:</span>广东省湛江市麻章区湖光镇海大路1号<br>广东海洋大学钟海楼A04008</p>
+                </div>
+                <div class="footer_item">
+                    <p><span><i class="glyphicon glyphicon-envelope"></i>&nbsp;Postal Code:524088</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5  col-md-offset-1 ">
+            <div class="right">
+                <div class="footer_logo">
+                    <a href="#"><img src="img/eximg.jpg" alt="">“知行合一”智能助学</a>
+                </div>
+                <br><p>给热爱学习的你一个学习的平台和一条成功的道路</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,236 @@
+﻿.head-delive
+{
+    border-right-style:solid;
+    border-right-width:1px;
+    border-right-color:#e5e4e4;
+}
+.head-img
+{
+    width:50px;
+    height:50px;
+}
+.head-set
+{
+    float:left;
+    margin:8px;
+}
+.head-h1-set
+{
+    margin:10px;
+    border-bottom-style:solid;
+    border-bottom-color:#CCCCCC;
+    border-bottom-width:1px;
+    padding-bottom:5px;
+}
+.head-td
+{
+    padding:0px 5px;
+}
+.enlarge
+{
+    height:25px;
+    width:25px;
+}
+.find-style
+{
+    border-right:none!important;
+    border-right-width:0px;
+    border-radius:13px;
+}
+.md-top-bg
+{
+    background-color:#CCCCCC;
+}
+.md-top-img
+{
+    position:relative;
+    height:400px;
+    width:100%;
+}
+.left-navigation
+{
+    position:fixed;
+    top:200px;
+}
+@media screen and (max-width:960px) {
+    .left-navigation
+    {
+        top:500px;
+    }
+    .find-style
+    {
+        width:200px!important;
+    }
+}
+.left-navigation-label
+{
+    position:absolute;
+    height:30px;
+    width:30px;
+    top:5px;
+    left:5px;
+    z-index:12;
+}
+.left-navigation-bg
+{
+    height:40px;
+    width:40px;
+    background-color:rgba(0,0,0,0.8);
+    border-bottom-right-radius:15px;
+    z-index:12;
+}
+#mobile-menu
+{
+    position: fixed;
+    top:70px;
+    left: 0;
+    width: 220px;
+    height: 700px;
+    background-color: #373737;
+    z-index:140999;
+}
+a:hover, a:focus
+{
+    text-decoration: none;
+}
+.mobile-nav ul li a
+{
+    color: gray;
+    display: block;
+    padding: 1em 5%;
+    border-top: 1px solid #4f4f4f;
+    border-bottom: 1px solid #292929;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+}
+#mobile-menu
+{
+    position: fixed;
+    left: 0;
+    width: 220px;
+    background-color: #373737;
+    z-index:200;
+    transition: all 0.3s ease-in;
+    border-top-right-radius:20px;
+    border-bottom-right-radius:20px;
+}
+.mobile-menu-ul
+{
+    padding-left:10px;
+}
+.mobile-menu-a
+{
+    border-top-right-radius:20px;
+}
+.mobile-nav ul li a:hover
+{
+    background-color: #23A1F6;
+    color: #ffffff;
+}
+.show-nav
+{
+    transform: translateX(0);
+}
+.hide-nav
+{
+    transform: translateX(-220px);
+} /*侧滑关键*/
+.mobile-nav-taggle
+{
+    height: 35px;
+    line-height: 35px;
+    width: 35px;
+    background-color: #23A1F6;
+    color: #ffffff;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+.nav.avbar-inverse
+{
+    position: relative;
+}
+.nav-btn
+{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.md-top-zindex
+{
+    z-index:10;
+}
+.mobile-menu-turn-off
+{
+    position:relative;
+    top:10px;
+    right:10px;
+    border-top-right-radius:20px;
+    height:40px;
+    padding:0px;
+    color:#e5e4e4;
+    font-size:x-large;
+}
+.head-btn-set
+{
+    padding:5px 15px 5px 15px;
+}
+.tree
+{
+    position:relative;
+    top:6px;
+    height:45px;
+    width:45px;
+    margin-top:3px;
+}
+.carousel-btn
+{
+    border-color:white;
+    border-style:solid;
+    border-width:2px;
+    background-color:rgba(0,0,0,0.6);
+    color:white;
+}
+.text-blue
+{
+    color:#0099CC;
+}
+.login_svg
+{
+    position:relative;
+    top:7px;
+    height:25px;
+    width:25px;
+    margin-right:20px;
+}
+.login_input_set
+{
+   width:50%!important;
+}
+#forget
+{
+    position:relative;
+    left:60%;
+}
+.Verification_position
+{
+    position:relative;
+    top:15px;
+}
+.more-bg
+{
+    position:relative;
+    background-color:#373737;
+    border-left:none;
+}
+.panel-more
+{
+    position:relative;
+    top:0px;
+}
+.logintoregist
+{
+    position:absolute;
+    top:15px;
+    right:20px;
+}

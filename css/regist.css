@@ -1,0 +1,100 @@
+﻿.intro{
+    display: table;
+    width: 100%;
+    padding: 0;
+    background: url(../img/resgister-bg.jpg) center center no-repeat;
+    background-color: #e5e5e5;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.intro .overlay {
+    background: rgba(0,0,0,0.01);
+}
+
+.regist-head-set
+{
+    height:125px;
+    background-color:#fff;
+}
+.regist-head-VP
+{
+    position:relative;
+    top:35px;
+}
+.regist-head-img
+{
+    position:relative;
+    width:60px;
+    height:60px;
+    top:-5px;
+}
+.regist-head-width
+{
+    width:420px;
+}
+.regist-md-set
+{
+    height:620px;
+}
+.regist_input_set
+{
+    position:relative;
+    float:left;
+    top:2px;
+    width:45%!important;
+}
+.regist-position-set
+{
+    position:relative;
+    margin-top:60px;
+
+}
+.regist_svg
+{
+    position:relative;
+
+    float:left;
+}
+.regist-seize-seat
+{
+    position:relative;
+    margin-top:500px;
+}
+.regist-form-span span
+{
+    position:relative;
+    top:10px;
+}
+.regist-radio
+{
+    top:5px!important;
+    margin:15px;
+}
+.fileinput-button {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            top:0px!important;
+            padding-left:5px;
+        }
+
+.fileinput-button input{
+            position:absolute;
+            right: 0px;
+            top: 0px;
+            opacity: 0;
+            -ms-filter: 'alpha(opacity=0)';
+            font-size: 200px;
+        }
+
+.btn-toregister{
+    position: absolute;
+    margin: 15px auto;
+}
+
+#footer{
+    margin-top: 0;
+}

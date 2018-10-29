@@ -52,7 +52,7 @@
                             </div>
                         </td>
                         <td class="header-td"><a class="btn header-btn-set" href="regist.html"><h3 class="header-h3-set"><b>注册</b></h3></a></td></tr>
-                    <tr><td colspan="2"><input id="find" type="text" onclick="clear_text('find')" class="form-control input-sm col-md-10 find-style" placeholder="搜索你感兴趣的知识"/></td><td><img class="enlarge" src="img/enlarge.png" /></td></tr>
+                    <tr><td colspan="2"><input id="find" type="text" onclick="clear_text('find')" class="form-control input-sm find-style pull-left" placeholder="搜索你感兴趣的知识"/></td><td><img class="enlarge pull-left" src="img/enlarge.png" /></td></tr>
                 </table>
             </div>
         </div>
@@ -136,7 +136,7 @@
         </div>
 
         <!--页面主体中部-->
-        <div class="main_middle" onmousedown="Drag_switch_first()" onmouseup="Drag_switch_second()">
+        <div class="main_middle" onmousedown="Drag_switch_first(event)" onmouseup="Drag_switch_second(event)">
             <div class="col-md-12 tree_title">
                 <h1><span><img src="img/comment-icon.png" alt=""></span>&ensp;推荐知识树</h1>
             </div>

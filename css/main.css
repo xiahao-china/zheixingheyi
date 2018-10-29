@@ -50,6 +50,7 @@
     margin:0px;
     padding:5px 0px;
 }
+
 .enlarge
 {
     height:25px;
@@ -429,11 +430,6 @@ a:hover, a:focus
     {
         top:500px;
     }
-    .find-style
-    {
-        width:200px!important;
-
-    }
     .right-next
     {
     width:50px;
@@ -450,8 +446,13 @@ a:hover, a:focus
     {
         height:300px;
     }
+    .header-btn-set
+    {
+        padding:0px;
+    }
 }
 @media screen and (max-width:960px){
+    
     .main_middle
     {
         position:relative;

@@ -168,11 +168,11 @@ function login() {
 //____________________________________________执行______________________________________________
 
 var Drag_switch_first_data;
-function Drag_switch_first() {
-    Drag_switch_first_data = window.screenX || window.event.screenX;
+function Drag_switch_first(event) {
+    Drag_switch_first_data = event.clientX;
 }
-function Drag_switch_second() {
-    var Drag_switch_second_data = window.screenX || window.event.screenX;
+function Drag_switch_second(event) {
+    var Drag_switch_second_data = event.clientX;
 
     if ((Drag_switch_second_data - Drag_switch_first_data) > 50)
     {

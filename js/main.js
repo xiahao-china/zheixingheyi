@@ -29,6 +29,10 @@ function check_account(name,end) {
     var getvalue = $("input[name='"+name+"']").val();
     var objecter = $("#" + end);
     var special = /[^a-zA-Z0-9]/ig;
+    if (getvalue == "") {
+        clear_span(end);
+    }
+    else {
     if (getvalue.length >= 6 && getvalue.length <= 18) {
         if (special.test(getvalue) == true) {
             clear_span(end);
@@ -49,40 +53,50 @@ function check_account(name,end) {
         document.getElementById(end).innerHTML = "账号错误";
         return 0;
     }
+    }
 }
 
 function check_account_key(name, end) {
     var getvalue = $("input[name='" + name + "']").val();
     var objecter = $("#" + end);
-
-    if (getvalue.length >= 6 && getvalue.length <= 18) {
+    if (getvalue == "") {
         clear_span(end);
-        $("#" + end).addClass("glyphicon glyphicon-ok");
-        document.getElementById(end).style.color = "green";
-        return 1;
     }
     else {
-        clear_span(end);
-        document.getElementById(end).style.color = "#e34141";
-        document.getElementById(end).innerHTML = "密码错误";
-        return 0;
+        if (getvalue.length >= 6 && getvalue.length <= 18) {
+            clear_span(end);
+            $("#" + end).addClass("glyphicon glyphicon-ok");
+            document.getElementById(end).style.color = "green";
+            return 1;
+        }
+        else {
+            clear_span(end);
+            document.getElementById(end).style.color = "#e34141";
+            document.getElementById(end).innerHTML = "密码错误";
+            return 0;
+        }
     }
 }
 function check_Verification_code(name, end) {
     var value = $("input[name='" + name + "']").val();
     value = value.toLowerCase();
     check = check.toLowerCase();
-    if (value == check) {
-        document.getElementById(end).innerHTML = "";
-        $("#" + end).addClass("glyphicon glyphicon-ok");
-        $('#verification_check_end').css('color','green');
-        return 1;
+    if (value == "") {
+        clear_span(end);
     }
     else {
-        $("#" + end).removeClass("glyphicon glyphicon-ok");
-        document.getElementById(end).style.color = "#e34141";
-        document.getElementById(end).innerHTML = "验证码错误";
-        return 0;
+        if (value == check) {
+            document.getElementById(end).innerHTML = "";
+            $("#" + end).addClass("glyphicon glyphicon-ok");
+            $('#verification_check_end').css('color', 'green');
+            return 1;
+        }
+        else {
+            $("#" + end).removeClass("glyphicon glyphicon-ok");
+            document.getElementById(end).style.color = "#e34141";
+            document.getElementById(end).innerHTML = "验证码错误";
+            return 0;
+        }
     }
 }
 //____________________________________________验证码图片______________________________________________
@@ -108,20 +122,17 @@ function drawPic() {
     for (var i = 0; i < 4; i++) {
         var txt = str[randomNum(0, str.length)];
         check = check + txt;
-        ctx.fillStyle = randomColor(50, 160);  //随机生成字体颜色
-        ctx.font = randomNum(15, 40) + 'px SimHei'; //随机生成字体大小
+        ctx.fillStyle = randomColor(50, 160); 
+        ctx.font = randomNum(15, 40) + 'px SimHei';
         var x = 10 + i * 25;
         var y = randomNum(25, 45);
         var deg = randomNum(-45, 45);
-        //修改坐标原点和旋转角度
         ctx.translate(x, y);
         ctx.rotate(deg * Math.PI / 180);
         ctx.fillText(txt, 0, 0);
-        //恢复坐标原点和旋转角度
         ctx.rotate(-deg * Math.PI / 180);
         ctx.translate(-x, -y);
     }
-    /**绘制干扰线**/
     for (var i = 0; i < 8; i++) {
         ctx.strokeStyle = randomColor(40, 180);
         ctx.beginPath();
@@ -129,7 +140,6 @@ function drawPic() {
         ctx.lineTo(randomNum(0, width), randomNum(0, height));
         ctx.stroke();
     }
-    /**绘制干扰点**/
     for (var i = 0; i < 100; i++) {
         ctx.fillStyle = randomColor(0, 255);
         ctx.beginPath();

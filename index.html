@@ -33,13 +33,13 @@
                                         <div class="modal-body">
                                             <form class="form-inline">
                                                 <embed src="svg/account.svg" class="login_svg" />
-                                                <input class="form-control login_input_set" type="text" id="login_account" name="login_account" onclick="clear_text('login_account')" onblur="check_account('login_account','login_account_check_end')" value="请输入账号"/><span id="login_account_check_end"></span><br /><br />
+                                                <input class="form-control login_input_set" type="text" id="login_account" name="login_account"  onblur="check_account('login_account','login_account_check_end')" placeholder="请输入账号"/><span id="login_account_check_end"></span><br /><br />
                                                 <h4 id="disregist"><small>没账号?<a href="regist.html">去注册</a></small></h4><br />
                                                 <embed src="svg/key.svg" class="login_svg" />
-                                                <input class="form-control login_input_set" type="text" id="login_account_key" name="login_account_key" onclick="clear_text('login_account_key')" onblur="check_account_key('login_account_key','login_account_key_end')" value="请输入密码" /><span id="login_account_key_end"></span><br /><br />
+                                                <input class="form-control login_input_set" type="text" id="login_account_key" name="login_account_key" onclick="clear_text('login_account_key')" onblur="check_account_key('login_account_key','login_account_key_end')" placeholder="请输入密码" /><span id="login_account_key_end"></span><br /><br />
                                                 <h4 id="forget"><small><a href="#">忘记密码?</a></small></h4><br />
                                                 <embed src="svg/verification.svg" class="login_svg" />
-                                                <input class="form-control login_input_vp_set" type="text" id="login_check" name="login_check" onclick="clear_text('login_check')" onblur="check_Verification_code('login_check','verification_check_end')" value="请输入验证码" /><span id="verification_check_end"></span>
+                                                <input class="form-control login_input_vp_set" type="text" id="login_check" name="login_check" onclick="clear_text('login_check')" onblur="check_Verification_code('login_check','verification_check_end')" placeholder="请输入验证码"/><span id="verification_check_end"></span>
                                                 <span class="Verification_position" ><canvas class="pull-left" onclick="drawPic()" id="canvase" width="120" height="45"></canvas></span><br /><br />
                                             </form>
                                         </div>
@@ -52,7 +52,7 @@
                             </div>
                         </td>
                         <td class="header-td"><a class="btn header-btn-set" href="regist.html"><h3 class="header-h3-set"><b>注册</b></h3></a></td></tr>
-                    <tr><td colspan="2"><input id="find" type="text" onclick="clear_text('find')" class="form-control input-sm col-md-10 find-style" value="搜索你感兴趣的知识"/></td><td><img class="enlarge" src="img/enlarge.png" /></td></tr>
+                    <tr><td colspan="2"><input id="find" type="text" onclick="clear_text('find')" class="form-control input-sm col-md-10 find-style" placeholder="搜索你感兴趣的知识"/></td><td><img class="enlarge" src="img/enlarge.png" /></td></tr>
                 </table>
             </div>
         </div>
@@ -141,65 +141,47 @@
                 <h1><span><img src="img/comment-icon.png" alt=""></span>&ensp;推荐知识树</h1>
             </div>
             <div id="tree_carousel" class="col-md-12 slide carousel col-xs-12">
-                <div id="carousel_Curtain" class="carousel-inner" ondragstart="return false">
+                <div id="carousel_Curtain" class="carousel-inner middle-img-margin" ondragstart="return false">
                     <div class="item active">
-                        <div class="col-md-2 col-xs-6 ">
+                        <div class="col-md-3 col-xs-6 ">
                             <img src="img/md-bg1.jpg" class="col-md-12 col-xs-12" alt="">
                         </div>
-                        <div class="col-md-2 col-xs-6">
+                        <div class="col-md-3 col-xs-6">
                             <img src="img/md-bg1.jpg"  class="col-md-12 col-xs-12" alt="">
                         </div>
-                        <div class="col-md-2 col-xs-6">
-                            <img src="img/md-bg2.jpg" class="col-md-12 col-xs-12" alt="">
-                        </div>
-                        <div class="col-md-2 col-xs-6">
-                            <img src="img/md-bg2.jpg" class="col-md-12 col-xs-12" alt="">
-                        </div>
-                        <div class="col-md-2 col-xs-6">
+                        <div class="col-md-3 col-xs-6">
                             <img src="img/md-bg1.jpg" class="col-md-12 col-xs-12" alt="">
                         </div>
-                        <div class="col-md-2 col-xs-6">
-                            <img src="img/md-bg1.jpg"  class="col-md-12 col-xs-12" alt="">
+                        <div class="col-md-3 col-xs-6">
+                            <img src="img/md-bg1.jpg" class="col-md-12 col-xs-12" alt="">
                         </div>
                     </div>
                     <div class="item ">
-                        <div class="col-md-2 col-xs-6 ">
-                            <img src="img/md-bg2.jpg" class="col-md-12 col-xs-11" alt="">
+                        <div class="col-md-3 col-xs-6 ">
+                            <img src="img/md-bg2.jpg" class="col-md-12 col-xs-12" alt="">
                         </div>
-                        <div class="col-md-2 col-xs-6">
-                            <img src="img/md-bg2.jpg"  class="col-md-12 col-xs-11" alt="">
+                        <div class="col-md-3 col-xs-6">
+                            <img src="img/md-bg2.jpg"  class="col-md-12 col-xs-12" alt="">
                         </div>
-                        <div class="col-md-2 col-xs-6">
-                            <img src="img/md-bg1.jpg" class="col-md-12 col-xs-11" alt="">
+                        <div class="col-md-3 col-xs-6">
+                            <img src="img/md-bg2.jpg" class="col-md-12 col-xs-12" alt="">
                         </div>
-                        <div class="col-md-2 col-xs-6">
-                            <img src="img/md-bg1.jpg" class="col-md-12 col-xs-11" alt="">
-                        </div>
-                        <div class="col-md-2 col-xs-6">
-                            <img src="img/md-bg2.jpg" class="col-md-12 col-xs-11" alt="">
-                        </div>
-                        <div class="col-md-2 col-xs-6">
-                            <img src="img/md-bg2.jpg"  class="col-md-12 col-xs-11" alt="">
+                        <div class="col-md-3 col-xs-6">
+                            <img src="img/md-bg2.jpg" class="col-md-12 col-xs-12" alt="">
                         </div>
                     </div>
                     <div class="item">
-                        <div class="col-md-2 col-xs-6 ">
-                            <img src="img/md-bg1.jpg" class="col-md-12 col-xs-11" alt="">
+                        <div class="col-md-3 col-xs-6 ">
+                            <img src="img/md-bg1.jpg" class="col-md-12 col-xs-12" alt="">
                         </div>
-                        <div class="col-md-2 col-xs-6">
-                            <img src="img/md-bg1.jpg"  class="col-md-12 col-xs-11" alt="">
+                        <div class="col-md-3 col-xs-6">
+                            <img src="img/md-bg1.jpg"  class="col-md-12 col-xs-12" alt="">
                         </div>
-                        <div class="col-md-2 col-xs-6">
-                            <img src="img/md-bg2.jpg" class="col-md-12 col-xs-11" alt="">
+                        <div class="col-md-3 col-xs-6">
+                            <img src="img/md-bg1.jpg" class="col-md-12 col-xs-12" alt="">
                         </div>
-                        <div class="col-md-2 col-xs-6">
-                            <img src="img/md-bg2.jpg" class="col-md-12 col-xs-11" alt="">
-                        </div>
-                        <div class="col-md-2 col-xs-6">
-                            <img src="img/md-bg1.jpg" class="col-md-12 col-xs-11" alt="">
-                        </div>
-                        <div class="col-md-2 col-xs-6">
-                            <img src="img/md-bg1.jpg"  class="col-md-12 col-xs-11" alt="">
+                        <div class="col-md-3 col-xs-6">
+                            <img src="img/md-bg1.jpg" class="col-md-12 col-xs-12" alt="">
                         </div>
                     </div>
                     <a class="right carousel-control" href="#tree_carousel" role="button" data-slide="next">
@@ -216,7 +198,7 @@
             <div class="col-md-12 comment_title ">
                 <h1><span><img src="img/comment-icon.png" alt=""></span>&ensp;精彩评论区</h1>
             </div>
-            <div id="carousel" class="col-md-10 col-md-offset-1 carousel slide carousel-float pull-left col-xs-11 ">
+            <div id="carousel" class="col-md-10 col-md-offset-1 carousel slide carousel-float pull-left col-xs-12 carousel-margin">
                 <!--<ol class="carousel-indicators">-->
                     <!--<li data-target="#carousel" data-slide-to="0" class="active"></li>-->
                     <!--<li data-target="#carousel" data-slide-to="1"></li>-->

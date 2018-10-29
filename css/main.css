@@ -102,19 +102,9 @@
 {
     height:40px;
     width:40px;
-    background-color:rgba(0,0,0,0.8);
+    background-color:#999999;
     border-bottom-right-radius:15px;
     z-index:12;
-}
-#mobile-menu
-{
-    position: fixed;
-    top:70px;
-    left: 0;
-    width: 220px;
-    height: 700px;
-    background-color: #373737;
-    z-index:140999;
 }
 a:hover, a:focus
 {
@@ -133,6 +123,7 @@ a:hover, a:focus
 #mobile-menu
 {
     position: fixed;
+    top:70px;
     left: 0;
     width: 220px;
     height: 85%;
@@ -412,6 +403,26 @@ a:hover, a:focus
 .right-next
 {
     width:5%;
+}
+.carousel-margin
+{
+    margin-top:10px;
+    margin-bottom:30px;
+}
+.carousel-inner
+{
+    margin-bottom:20px;
+}
+.middle-img-margin div > div > img
+{
+    padding-left:0px;
+    padding-right:10px;
+    padding-bottom:3px;
+}
+.middle-img-margin > div >div
+{
+    padding-left:0px;
+    padding-right:10px;
 }
 @media screen and (max-width:960px) {
     .left-navigation

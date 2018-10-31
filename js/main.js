@@ -115,6 +115,7 @@ function drawPic() {
     var width = canvas.width;
     var height = canvas.height;
     var ctx = canvas.getContext("2d");
+    check = "";
     ctx.textBaseline = 'bottom';
     ctx.fillStyle = randomColor(180, 240);
     ctx.fillRect(0, 0, width, height);
@@ -150,13 +151,12 @@ function drawPic() {
 //____________________________________________登陆交互______________________________________________
 
 function login() {
-    var bllon = check_account('username', 'login_account_check_end') & check_account('password', 'login_account_key_end') & check_Verification_code('login_check', 'verification_check_end');
-    alert(bllon);
+    var bllon = check_account('login_account', 'login_account_check_end') & check_account('login_account_key', 'login_account_key_end') & check_Verification_code('login_check', 'verification_check_end');
     if (bllon == 1) {
-        $.post("undefine", {
+        $.post("http://127.0.0.1:8080/Heaven/server/authentication/form", {
             "username": $("input[name='username']").val(),
             "password": $("input[name='password']").val(),
-        }, alert("成功"))
+        }, alert("成功发送"))
 
     }
     else {

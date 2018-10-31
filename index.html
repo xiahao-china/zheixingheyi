@@ -33,13 +33,13 @@
                                         <div class="modal-body">
                                             <form class="form-inline">
                                                 <embed src="svg/account.svg" class="login_svg" />
-                                                <input class="form-control login_input_set" type="text" id="login_account" name="login_account"  onblur="check_account('login_account','login_account_check_end')" placeholder="请输入账号"/><span id="login_account_check_end"></span><br /><br />
+                                                <input class="form-control login_input_set" type="text" id="login_account" name="login_account"  onblur="check_account('login_account','login_account_check_end')" placeholder="请输入账号"/><span class="prompt_box" id="login_account_check_end"></span><br /><br />
                                                 <h4 id="disregist"><small>没账号?<a href="regist.html">去注册</a></small></h4><br />
                                                 <embed src="svg/key.svg" class="login_svg" />
-                                                <input class="form-control login_input_set" type="text" id="login_account_key" name="login_account_key" onclick="clear_text('login_account_key')" onblur="check_account_key('login_account_key','login_account_key_end')" placeholder="请输入密码" /><span id="login_account_key_end"></span><br /><br />
+                                                <input class="form-control login_input_set" type="text" id="login_account_key" name="login_account_key" onclick="clear_text('login_account_key')" onblur="check_account_key('login_account_key','login_account_key_end')" placeholder="请输入密码" /><span class="prompt_box" id="login_account_key_end"></span><br /><br />
                                                 <h4 id="forget"><small><a href="#">忘记密码?</a></small></h4><br />
                                                 <embed src="svg/verification.svg" class="login_svg" />
-                                                <input class="form-control login_input_vp_set" type="text" id="login_check" name="login_check" onclick="clear_text('login_check')" onblur="check_Verification_code('login_check','verification_check_end')" placeholder="请输入验证码"/><span id="verification_check_end"></span>
+                                                <input class="form-control login_input_vp_set" type="text" id="login_check" name="login_check" onclick="clear_text('login_check')" onblur="check_Verification_code('login_check','verification_check_end')" placeholder="请输入验证码"/><span class="prompt_box" id="verification_check_end"></span>
                                                 <span class="Verification_position" ><canvas class="pull-left" onclick="drawPic()" id="canvase" width="120" height="45"></canvas></span><br /><br />
                                             </form>
                                         </div>

@@ -168,16 +168,17 @@ function login() {
 //____________________________________________执行______________________________________________
 
 var Drag_switch_first_data;
-function Drag_switch_first(event) {
-    Drag_switch_first_data = event.clientX;
+document.getElementById("main_middle").addEventListener("touchstart", Drag_switch_first);
+document.getElementById("main_middle").addEventListener('touchmove', Drag_switch_second);
+function Drag_switch_first() {
+    Drag_switch_first_data = event.touches[0].clientX;
+    console.log(Drag_switch_first_data);
 }
-function Drag_switch_second(event) {
-    var Drag_switch_second_data = event.clientX;
-
-    if ((Drag_switch_second_data - Drag_switch_first_data) > 50)
-    {
-        $('#tree_carousel').carousel('next');
-    }
+function Drag_switch_second() {
+    var Drag_switch_second_data = event.touches[0].clientX;
+        if ((Drag_switch_second_data - Drag_switch_first_data) > 50) {
+            $('#tree_carousel').carousel('next');
+        }
 }
 
 //___________________________________________拖动切换______________________________________________

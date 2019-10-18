@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>"知行合一"登陆</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/regist.css" />
+    <link rel="stylesheet" href="css/registmore.css" />
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script charset="UTF-8" type="text/javascript" src="js/regist.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row regist-head-set">
+        <div class="regist-head-VP">
+            <div class="regist-head-width center-block">
+                <img class="img-circle regist-head-img head-set " src="img/logo.png" />
+                <h1 class="head-set head-h1-set"><b>"知行合一"智能助学</b></h1>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 头部组成-->
+<div class="intro">
+    <div class="overlay">
+        <div class="container-fluid regist-md-set">
+            <div class="row">
+                <div class="col-md-4 col-sm-2 col-xs-3 regist-seize-seat"></div>
+                <div class="form-group col-md-6 col-sm-10 regist-position-set">
+                    <div class="col-md-1"></div>
+                    <form class="form-inline col-md-9 login-form-span" method="post" action="">
+                        <label>账号：</label><br />
+                        <embed src="svg/account.svg" class="login_svg regist_svg" />
+                        <input class="form-control regist_input_set" type="text" id="login_account" name="regist_account" onblur="check_account('regist_account','regist_account_check_end')" placeholder="请输入账号"/><span id="regist_account_check_end" class="login_span"></span><br /><br />
+                        <h4 id="disregist"><small>没账号?<a href="regist.html">去注册</a></small></h4>
+                        <label>密码：</label><br />
+                        <embed src="svg/key.svg" class="login_svg regist_svg" />
+                        <input class="form-control regist_input_set" type="password" id="login_key" name="regist_account_frist_key" onclick="clear_text('regist_account_frist_key')" onblur="check_account_key('regist_account_frist_key','regist_account_frist_key_end')"  placeholder="请输入密码" /><span id="regist_account_frist_key_end" class="login_span"></span><br /><br />
+                        <h4 id="forget"><small><a href="#">忘记密码?</a></small></h4>
+                        <label>验证码：</label><br />
+                        <embed src="svg/verification.svg" class="login_svg" />
+                        <input class="form-control login_input_vp_set" type="text" id="login_check" name="login_check" onclick="clear_text('login_check')" onblur="check_Verification_code('login_check','verification_check_end')" placeholder="请输入验证码"/><span class="prompt_box" id="verification_check_end"></span>
+                        <span class="Verification_position" ><img class="pull-left" id="canvase" width="120" height="45" src="/server/code/image"></span><br /><br />
+                        <br/>
+                        <div class="col-md-7 col-sm-7 col-xs-7">
+                            <input id="tologin" type="button" class="btn btn-block btn-lg btn-success btn-tologin pull-right" onclick="login()" value="立即登陆"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--    ————注册框架-->
+<div id="footer">
+    <div class="container">
+        <div class="left">
+            <div class="col-md-6 col-xs-12 ">
+                <div class="footer_item">
+                    <p><span><i class="glyphicon glyphicon-copyright-mark"></i>&nbsp;Copyright:广东海洋大学创数软件团队</span>
+                </div>
+                <div class="footer_item">
+                    <p><span><i class="glyphicon glyphicon-map-marker"></i>&nbsp;Adress:</span>广东省湛江市麻章区湖光镇海大路1号<br>广东海洋大学钟海楼A04008</p>
+                </div>
+                <div class="footer_item">
+                    <p><span><i class="glyphicon glyphicon-envelope"></i>&nbsp;Postal Code:524088</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5  col-md-offset-1 ">
+            <div class="right">
+                <div class="footer_logo">
+                    <a href="#"><img src="img/eximg.jpg" alt="">“知行合一”智能助学</a>
+                </div>
+                <br><p>给热爱学习的你一个学习的平台和一条成功的道路</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

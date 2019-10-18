@@ -61,3 +61,38 @@ function loadFile(file) {
     $("#Documentdetails").val(file.name);
 }
 //————————————输出文档详情
+
+//————————————注册交互
+function regist() {
+
+
+    $.ajax({
+        type: 'post',
+        url: Path + '/user',
+        contentType: 'application/x-www-form-urlencoded',
+        dataType: 'json',
+        async: true,
+        data: {
+            userName:document.getElementById('regist_account').value,
+            userPassword:document.getElementById('regist_account_frist_key').value,
+            userEmail:document.getElementById('regist_mail').value
+        },
+        success: function (result) {
+            if(result.code=='200'){
+                alert('注册成功');
+                window.location='index.html'
+            }
+            else alert(result.msg);
+        },
+        error: function () {
+            alert('注册失败');
+        }
+    })
+
+}
+//————————————注册交互
+$(document).ready(function () {
+
+    $('#toregist').click(regist);
+
+})

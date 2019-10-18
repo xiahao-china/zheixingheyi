@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AddCourse</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/Add Course.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/manage.css">
+</head>
+
+<body>
+<!--页头部分-->
+<div id="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 col-sm-9 col-xs-9">
+                <img class="img-circle header-img header-set" src="img/seize.jpg" />
+                <h1 class="header-set header-h1-set"><b>"知行合一"智能助学</b></h1>
+                <embed src="svg/tree.svg" class="tree"/>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-3 continer">
+             <embed class="svg1" src="svg/修改个人头像.svg">
+			<div class="hide-div">
+			<!--<button type="button" class="btn btn-info">我的课程</button>
+			<button type="button" class="btn btn-info">个人设置</button>
+			<a href="#">退出登录</a>-->	
+			</div>
+            </div>
+        </div>
+    </div>
+</div>
+	<!--页面主体-->
+<div id="all-bodys">
+<div class="body-input row">
+<div class="body-input1 col-sm-12 col-lg-4 ">
+		<span>方向:</span>
+          <select id="select1" class="select">
+              <!-- <option value="上海">上海</option>
+            <option value="2015-2016">北京</option>
+            <option value="2014-2015">广州</option>-->
+
+          </select>
+        </div>
+        <div class="col-sm-12 col-lg-4 form-group1">
+            <!--
+                      <form id="uploadfile" action="http://47.106.247.251:8003/admin/homeCourse/uploadImg" method="POST"  enctype="multipart/form-data" onsubmit="return RuturnLoginResult();">
+                      <label for="file">课程图片上传</label>
+                       <input name="file" type="file" id="file">
+                       <input type="text" name="type" value="1">
+                       <input type="submit" name="submit" value="上传">
+                      </form>
+             -->
+            <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                上传图片
+            </button>
+            <!-- 模态框（Modal） -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <form id="ajaxForm">
+                                <input id="img-file" type="file" name="file" />
+                            </form>
+                           <!-- <button type="submit" >提交1</button>-->
+                            <img id="imgup" src=""/>
+                            <button id="btnSubmit" type="button" class="btn btn-default" data-dismiss="modal">提交
+                            </button>
+
+                        </div>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+
+<div class="body-input2 col-sm-12 col-lg-4 ">
+       <span>分类:</span>
+         <select id="select2" class="select">
+             <!-- <option value="上海">上海</option>
+                <option value="2015-2016">北京</option>
+                <option value="2014-2015">广州</option>-->
+          </select>
+        </div>
+</div>
+<div>
+    <div class="row body-brief">
+        <form method="post">
+            <p class="brief">课程标题：</p>
+            <input id="cTile" type="text" class="text-title col-sm-12 col-lg-8 col-lg-offset-2">
+        </form>
+    </div>
+    <div class="row body-brief">
+	<form method="post">
+			<p class="brief">课程简介：</p>
+			<textarea id="cBiref" class="col-sm-12 col-lg-8 col-lg-offset-2 brief-text" rows="7" cols="79"></textarea>
+		</form>
+    </div>
+	<div class="row form-group">
+        <p class="brief">课程详情：</p>
+          <div class="col-sm-12 col-lg-8 col-lg-offset-2 form-text">
+            <div id="editor"> </div>
+           <script type="text/javascript" src="js./wangEditor.js"></script>
+           <script type="text/javascript">
+            var E = window.wangEditor;
+            var editor = new E('#editor');
+            editor.create()
+          </script>
+          </div>
+
+    <div class="col-sm-12 col-lg-2 col-lg-offset-5">
+    <button id="confirm" type="button" class="btn btn-default">确定</button>
+    <button type="button" class="btn btn-default">取消</button>
+    </div>
+    </div>
+        <br/>
+</div>
+</div>
+</body>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/main.js"></script>
+<script src="js/Add%20Course.js"></script>
+<script src="js/jsform.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/jquery.cookie.js"></script>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>"知行合一"课程学习</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/CourseVedio.css">
+
+</head>
+<body>
+<div id="header">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 col-sm-9 col-xs-9">
+            <img class="img-circle header-img header-set" src="img/logo.png" />
+            <h1 class="header-set header-h1-set"><b>"知行合一"智能助学</b></h1>
+            <embed src="svg/tree.svg" class="tree"/>
+        </div>
+        <div class="col-md-2 col-sm-3 col-xs-3 ">
+            <table>
+                <tr>
+                    <td class="header-delive header-td">
+                        <a class="btn header-btn-set btn-login" data-toggle="modal" data-target="#login"><h3 class="header-h3-set"><b onclick="tologin()">登录</b></h3></a>
+                        <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        <h4 class="modal-title" id="myModalLabel">欢迎登录</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" onclick="login()">登录</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal -->
+                        </div>
+                    </td>
+                    <td class="header-td"><a class="btn header-btn-set" href="regist.html"><h3 class="header-h3-set"><b>注册</b></h3></a></td></tr>
+                <tr><td colspan="2"><input id="find" type="text" onclick="clear_text('find')" class="form-control input-sm find-style pull-left" placeholder="搜索你感兴趣的知识"/></td><td><img class="enlarge pull-left" src="img/enlarge.png" /></td></tr>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 study">
+    <div class="col-lg-7 col-sm-12 col-md-6 col-xs-12 col-lg-offset-1 col-md-offset-1" id="Vedio">
+        <div >
+            <div class="AutoWidth pull-left"><div class="pull-left"></div><a class="pull-left">返回课程详情</a></div>
+            <div class="AutoWidth pull-right"><div class="pull-right"></div><a class="pull-right">下一节课</a></div>
+        </div>
+
+        <video controls>
+            <source src="video/video_3.MP4">
+        </video>
+    </div>
+
+    <div class="pull-right col-lg-3 col-md-3 col-xs-12 col-sm-12 container" id="VedioList">
+
+        <div class="row">
+
+                <img src="img/python.png" class="pull-left">
+                <h4 class="pull-left">课程名</h4><br/>
+            <h5 class="text-muted small col-lg-7">这里是课程简介，关于课程的简单信息就放在这里吧</h5>
+        </div>
+
+        <div></div>
+        <div class="row dropdown">
+            <a class="btn dropdown-toggle" data-toggle="collapse" data-target="#menu1">第一章节<span class="glyphicon glyphicon-edit"></span></a>
+            <ul id="menu1" class="collapse list-group">
+                <li class="list-group-item">第一小节: 随便起个名字吧</li>
+                <li class="list-group-item">第二小节：我也不造叫什么好</li>
+            </ul>
+            <a class="btn dropdown-toggle" data-toggle="collapse" data-target="#menu2">第二章节<span class="glyphicon glyphicon-edit"></span></a>
+            <ul id="menu2" class="collapse list-group">
+                <li class="list-group-item">第一小节: 随便起个名字吧</li>
+                <li class="list-group-item">第二小节：我也不造叫什么好</li>
+            </ul>
+            <a class="btn dropdown-toggle" data-toggle="collapse" data-target="#menu3">第三章节<span class="glyphicon glyphicon-edit"></span></a>
+            <ul id="menu3" class="collapse list-group">
+                <li class="list-group-item">第一小节: 随便起个名字吧</li>
+                <li class="list-group-item">第二小节：我也不造叫什么好</li>
+            </ul>
+            <a class="btn dropdown-toggle" data-toggle="collapse" data-target="#menu4">第四章节<span class="glyphicon glyphicon-edit"></span></a>
+            <ul id="menu4" class="collapse list-group">
+                <li class="list-group-item"><a>第一小节: 随便起个名字吧</a></li>
+                <li class="list-group-item"><a>第二小节：我也不造叫什么好</a></li>
+            </ul>
+        </div>
+        <div id="shrink"><button  class="pull-right">收起<br/>课表</button></div>
+    </div>
+
+
+</div>
+
+<div class="row comment">
+    <div class="col-lg-7 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+            <div class="pull-left col-lg-1 col-md-1 col-sm-2 col-xs-2">
+                <img src="" class="pull-left">
+                <p class=""></p>
+            </div>
+            <div class="pull-left col-lg-7 col-md-7 col-sm-8 col-xs-8">
+
+            </div>
+            <div class="pull-right"></div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="container">
+        <div class="left">
+            <div class="col-md-6 col-xs-12 ">
+                <div class="footer_item">
+                    <p><span><i class="glyphicon glyphicon-copyright-mark"></i>&nbsp;Copyright:广东海洋大学创数软件团队</span>
+                </div>
+                <div class="footer_item">
+                    <p><span><i class="glyphicon glyphicon-map-marker"></i>&nbsp;Adress:</span>广东省湛江市麻章区湖光镇海大路1号<br>广东海洋大学钟海楼A04008</p>
+                </div>
+                <div class="footer_item">
+                    <p><span><i class="glyphicon glyphicon-envelope"></i>&nbsp;Postal Code:524088</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5  col-md-offset-1 ">
+            <div class="right">
+                <div class="footer_logo">
+                    <a href="#"><img src="img/eximg.jpg" alt="">“知行合一”智能助学</a>
+                </div>
+                <br><p>给热爱学习的你一个学习的平台和一条成功的道路</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/CourseVedio.js"></script>
+</html>

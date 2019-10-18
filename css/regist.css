@@ -68,6 +68,10 @@
     position:relative;
     top:10px;
 }
+.login-form-span{
+    position: relative;
+    top: 60px;
+}
 .regist-radio
 {
     top:5px!important;
@@ -94,7 +98,14 @@
     position: absolute;
     margin: 15px auto;
 }
-
+.btn-tologin{
+    position: relative;
+    margin: 15px auto;
+}
+.login_span{
+    padding-top: 10px;
+    padding-left: 10px;
+}
 #footer{
     margin-top: 0;
 }

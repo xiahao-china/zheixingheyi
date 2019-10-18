@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航栏与领域控制</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/control-navigation-and-category.css">
+    <link rel="stylesheet" href="src/kmsjsmap.css">
+
+
+</head>
+<body>
+    <div class="row ">
+        <img class="bg-img-full" src="img/bg_control.jpg">
+        <div class="navbar container-fluid control-head-set">
+            <div class="navbar-header navbar-brand header-title col-lg-1 col-md-2 col-sm-3 col-xs-4 text-center">Control</div>
+            <button type="button" class="navbar-toggle bar" data-toggle="collapse" data-target="#alltype">
+                <a href="#">
+                    <img src="img/bar.png" class="bar">
+                </a>
+            </button>
+            <div class="col-lg-offset-1 col-md-2 col-sm-4 col-xs-5 collapse navbar-collapse media-find-sm-right " id="alltype">
+                <ul class="nav navbar-nav">
+                    <li class="active dropdown"><a href="#panel_01" class="dropdown-toggle" data-parent="#accordion" data-toggle="collapse">Category<b class="caret"></b></a>
+                        <ul id="panel_01" class="panel-body collapse panel_detail">
+                            <li><a href="#">获取领域</a></li>
+                            <li><a href="#">删除领域</a></li>
+                            <li><a href="#">新增领域</a></li>
+                            <li><a href="#">更新领域</a></li>
+                            <li><a href="#">删除领域及方向链接</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#panel_02" class="dropdown-toggle" data-parent="#accordion" data-toggle="collapse">Navigation<b class="caret"></b></a>
+                        <ul id="panel_02" class="panel-body collapse panel_detail">
+                            <li><a href="#">获取导航栏</a></li>
+                            <li><a href="#">新增导航栏</a></li>
+                            <li><a href="#">基本信息修改</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">更新链接表</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">删除存储表关系(物理删除)</a></li>
+                            <li><a href="#">删除存储表关系(逻辑删除)</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a  href="#panel_03" class="dropdown-toggle" data-parent="#accordion" data-toggle="collapse">
+                            Other
+                            <b class="caret"></b>
+                        </a>
+                        <ul id="panel_03" class="panel-body collapse panel_detail">
+                            <li><a href="#">教师审核</a></li>
+                            <li><a href="#">课程审核</a></li>
+                            <li><a href="#">管理树</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="control-body row">
+            <div class="col-lg-10 col-md-10 col-sm-11 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+                <div class="col-lg-4 col-md-5 col-sm-10 col-xs-10 delive">
+                    <div class="row">
+                        <span class=" list-group list-group-item  list-group-item-info" id="name">请选择管理项<span class="text-muted small"> Please chose the manger</span></span>
+                    </div>
+                    <div class="row modal-body operation_box">
+                            <div id="all_input">
+                                <div class="sethidden" id="getAllHomeNavigations">
+                                    <label class="label label-info" >id</label>
+                                    <input class="input-group" name="id">
+                                </div>
+                                <div class="sethidden" id="insertHomeNavigation">
+                                    <label class="label label-info">导航栏名</label>
+                                    <input class="input-group" name="navigationName">
+                                    <label class="label label-info">状态</label>
+                                    <input class="input-group" name="status" value="0">
+                                </div>
+                                <div class="sethidden" id="updateHomeNavigation">
+                                    <label class="label label-info">导航栏id</label>
+                                    <input class="input-group" name="id">
+                                    <label class="label label-info">导航栏名</label>
+                                    <input class="input-group" name="navigationName">
+                                    <label class="label label-info">状态</label>
+                                    <input class="input-group" name="status" value="0">
+                                </div>
+                                <div class="sethidden" id="updateRelation">
+                                    <label class="label label-info">链接对象id</label>
+                                    <input class="input-group" name="homeFieldList[0].id">
+                                    <label class="label label-info">链接对象名</label>
+                                    <input class="input-group" name="homeFieldList[0].fieldName">
+                                    <label class="label label-info">链接对象状态</label>
+                                    <input class="input-group" name="homeFieldList[0].status" value="">
+                                    <label class="label label-info">导航栏id</label>
+                                    <input class="input-group" name="id">
+                                    <label class="label label-info">导航栏名</label>
+                                    <input class="input-group" name="navigationName">
+                                    <label class="label label-info">状态</label>
+                                    <input class="input-group" name="status" value="0">
+                                </div>
+                                <div class="sethidden" id="updateCategory">
+                                    <label class="label label-info">领域id</label>
+                                    <input class="input-group" name="id">
+                                    <label class="label label-info">领域名</label>
+                                    <input class="input-group" name="categoryName">
+                                    <label class="label label-info">状态</label>
+                                    <input class="input-group" name="status" value="0">
+                                </div>
+                                <div class="sethidden" id="insertCategory">
+                                    <label class="label label-info">领域名</label>
+                                    <input class="input-group" name="categoryName">
+                                    <label class="label label-info">状态</label>
+                                    <input class="input-group" name="status" value="0">
+                                </div>
+                                <div class="sethidden" id="deleteCategoryRelation">
+                                    <label class="label label-info">领域id</label>
+                                    <input class="input-group" name="id">
+                                </div>
+                                <div class="sethidden" id="deleteCategory">
+                                    <label class="label label-info">领域id</label>
+                                    <input class="input-group" name="id">
+                                </div>
+                                <div class="sethidden" id="CourseAudity">
+
+                                </div>
+                                <div class="sethidden" id="Teacheraudit">
+
+                                </div>
+                                <div class="sethidden" id="Managementtree">
+                                    <label class="label label-info">树ID</label>
+                                    <input class="input-group treename" name="treename">
+                                </div>
+                                <div class="sethidden" id="FindClassTree">
+                                    <label class="label label-info">课程ID</label>
+                                    <input class="input-group treename" name="classname">
+                                </div>
+                            </div>
+                            <button class="btn btn-success" id="submission">提交信息</button>
+                    </div>
+
+                </div>
+                <div class="col-lg-7 col-md-6 col-sm-10 col-xs-10 col-lg-offset-1 col-md-offset-1 delive">
+                    <div class="row">
+                        <span class=" list-group list-group-item  list-group-item-heading">运行结果<span class="text-muted small"> Operation result</span></span>
+                    </div>
+                    <div class="row modal-body operation_box">
+                        <h4 id="state" class="label-success label pull-left margin-right margin-bottom">state:<span id="state_information">200</span></h4>
+                        <h4 id="msg" class="label-primary label pull-left margin-bottom">mssage:<span id="msg_information">成功</span></h4>
+                        <div class="row modal-body result_set">
+                            <table class="table">
+                                    <thead class="table_thead">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>领域id</th>
+                                        <th>领域名</th>
+                                        <th>状态</th>
+                                    </tr>
+                                    </thead>
+                                <thead class="table_thead">
+                                <tr>
+                                    <th>#</th>
+                                    <th>导航栏id</th>
+                                    <th>导航栏名</th>
+                                    <th>状态</th>
+                                    <th>链接对象及状态</th>
+                                </tr>
+                                </thead>
+                                <tbody id="tbody">
+                                <!--<tr>-->
+                                    <!--<td>1</td>-->
+                                    <!--<td>1</td>-->
+                                    <!--<td>1</td>-->
+                                    <!--<td>1</td>-->
+                                    <!--<td class="line_detail">查看详情<div>-->
+                                        <!--<table>-->
+                                            <!--<thead>-->
+                                            <!--<tr>-->
+                                                <!--<th>导航栏id</th>-->
+                                                <!--<th>导航栏名</th>-->
+                                                <!--<th>状态</th>-->
+                                            <!--</tr>-->
+                                            <!--</thead>-->
+                                            <!--<tbody>-->
+                                            <!--<tr>-->
+                                                <!--<td>1</td>-->
+                                                <!--<td>1</td>-->
+                                                <!--<td>1</td>-->
+                                            <!--</tr>-->
+                                            <!--</tbody>-->
+                                        <!--</table>-->
+                                    <!--</div></td>-->
+                                <!--</tr>-->
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sethidden tree_body col-lg-10 col-md-10 col-sm-10 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <span class="list-group list-group-item list-group-item-success" id="manger_tree">管理树<span class="text-muted small"> Other</span></span>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div id="tree_container">
+
+                            <div class="op_tree">
+                                <button class="btn" onclick="createTree()">新建知识树</button>
+                                <button class="btn" onclick="saveTree()">保存知识树</button>
+
+                                <!--<div class="dropdown">-->
+                                <!--<button class="btn dropdown-toggle" type="button" data-toggle="dropdown" id="ChoseTheme">选择风格 <span class="caret"></span></button>-->
+                                    <!--<ul class="dropdown-menu" role="menu" aria-labelledby="ChoseTheme">-->
+                                        <!--<li>primary</li>-->
+                                        <!--<li>info</li>-->
+                                        <!--<li>success</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                                <select class="btn" id="theme_select">
+                                    <option>primary</option>
+                                    <option>greensea</option>
+                                    <option>success</option>
+                                    <option>belizehole</option>
+                                    <option>wisteria</option>
+                                    <option>asphalt</option>
+                                    <option>kms1</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+<div class="modal" id="welcome">
+        <div class="ab_center col-lg-4 col-md-5 col-sm-8 col-xs-10 text-center welcome_set">
+            &nbsp;欢迎来到"知行合一"的控制台，在这里你可以对知行合一后台数据进行增删改查，请您更改前务必校对并确保数据的准确后再进行更改。<br>
+            <button class="btn btn-success btn-lg" data-dismiss="modal">进入页面</button>
+        </div>
+</div>
+<div class="right_bottom">
+    <img src="img/home.png" class="tohome" id="tohome">
+    <img src="img/three.png" class="right_bottom_three">
+    <img src="img/gear.png" class="right_bottom_gear">
+</div>
+</body>
+<script src="js/jquery-3.1.1.min.js" ></script>
+<script src="js/bootstrap.js" ></script>
+<script src="src/kmsjsmap.js" ></script>
+<script src="src/zxx.drag.1.0.js" type="text/javascript"></script>
+<script src="js/AboutTree.js"></script>
+<script src="js/control-navigation-and-category.js"></script>
+</html>

@@ -14,15 +14,15 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-10 col-sm-9 col-xs-9">
-                <img class="img-circle header-img header-set" src="img/seize.jpg" />
+                <img class="img-circle header-img header-set" src="img/logo.png" />
                 <h1 class="header-set header-h1-set"><b>"知行合一"智能助学</b></h1>
                 <embed src="svg/tree.svg" class="tree"/>
             </div>
             <div class="col-md-2 col-sm-3 col-xs-3 ">
                 <table>
-                    <tr>
+                    <tr class="logined">
                         <td class="header-delive header-td">
-                            <a class="btn header-btn-set btn-login" data-toggle="modal" data-target="#login"><h3 class="header-h3-set"><b>登录</b></h3></a>
+                            <a class="btn header-btn-set btn-login" data-toggle="modal" data-target="#login"><h3 class="header-h3-set"><b onclick="tologin()">登录</b></h3></a>
                             <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
@@ -40,7 +40,7 @@
                                                 <h4 id="forget"><small><a href="#">忘记密码?</a></small></h4><br />
                                                 <embed src="svg/verification.svg" class="login_svg" />
                                                 <input class="form-control login_input_vp_set" type="text" id="login_check" name="login_check" onclick="clear_text('login_check')" onblur="check_Verification_code('login_check','verification_check_end')" placeholder="请输入验证码"/><span class="prompt_box" id="verification_check_end"></span>
-                                                <span class="Verification_position" ><canvas class="pull-left" onclick="drawPic()" id="canvase" width="120" height="45"></canvas></span><br /><br />
+                                                <!--<span class="Verification_position" ><img class="pull-left" id="canvase" width="120" height="45" src="http://47.107.137.51:8002/admin/server/code/image"></span><br /><br />-->
                                             </form>
                                         </div>
                                         <div class="modal-footer">
@@ -52,14 +52,21 @@
                             </div>
                         </td>
                         <td class="header-td"><a class="btn header-btn-set" href="regist.html"><h3 class="header-h3-set"><b>注册</b></h3></a></td></tr>
-                    <tr><td colspan="2"><input id="find" type="text" onclick="clear_text('find')" class="form-control input-sm find-style pull-left" placeholder="搜索你感兴趣的知识"/></td><td><img class="enlarge pull-left" src="img/enlarge.png" /></td></tr>
+                    <tr><td colspan="2"><input id="find" type="text" onclick="clear_text('find')" class="form-control input-sm find-style pull-left" placeholder="搜索你感兴趣的知识"/></td><td><img class="enlarge pull-left" src="img/enlarge.png" onclick="tomorecourse()"/></td></tr>
                 </table>
             </div>
         </div>
     </div>
 </div>
+<!--主体背景-->
+<div class="main_bg bg-left1"></div>
+<div class="main_bg bg-right1"></div>
+<div class="main_bg bg-left2"></div>
+
 <!--页面主体-->
 <div class="main">
+
+
     <!--左侧导航栏-->
     <div class="left-navigation navbar-fixed-top">
         <div class="left-navigation-bg">
@@ -70,18 +77,22 @@
                 <ul class="mobile-menu-ul">
                     <li class="mobile-menu-turn-off text-right" onclick="open_left()"><span class="glyphicon glyphicon-chevron-left"></span></li>
                     <li class="dropdown-header"><h3>分类</h3></li>
-                    <li><a class="mobile-menu-a" href="#">大致分类1</a></li>
-                    <li><a href="#">大致分类2</a></li>
-                    <li><a href="#">大致分类3</a></li>
-                    <li><a href="#">大致分类4</a></li>
-                    <li><a href="#">大致分类5</a></li>
-                    <li><a href="#">大致分类6</a></li>
-                    <li><a href="#">大致分类7</a></li>
-                    <li><a href="#">大致分类8</a></li>
+                    <div id="tbody1">
+                    <!--<li><a class="type_a" href="#">大致分类1</a><div id="x" class="left_type_moreinformation"><div class="small_top_type col-lg-11 text-primary">大致分类1</div><div class="small_type col-lg-3">小分类1</div></div></li>-->
+                    <!--<li><a class="type_a" href="#">大致分类2</a></li>-->
+                    <!--<li><a class="type_a" href="#">大致分类3</a></li>-->
+                    <!--<li><a class="type_a" href="#">大致分类4</a></li>-->
+                    <!--<li><a class="type_a" href="#">大致分类5</a></li>-->
+                    <!--<li><a class="type_a" href="#">大致分类6</a></li>-->
+                    <!--<li><a class="type_a" href="#">大致分类7</a></li>-->
+                    <!--<li><a class="type_a" href="#">大致分类8</a></li>-->
+                    </div>
                     <li class="panel-group">
                         <a href="#more" class="panel panel-default panel-heading more-bg" data-toggle="collapse" data-parent="#accordion">更多<span class="caret"></span></a>
                         <ul id="more" class="panel-collapse collapse in panel-more">
-                            <li><a href="#">大致分类9</a></li>
+                            <div id="tbody2">
+                            <!--<li><a class="type_a" href="#">大致分类9</a></li>-->
+                            </div>
                         </ul>
                     </li>
                 </ul>
@@ -91,7 +102,7 @@
     <!--页面主体-->
     <div class="container">
         <!--页面主体头部-->
-        <div class="main_top">
+        <div class="main_top row">
             <div class="col-md-12 col-sm-12 col-sm-12">
                 <div class="row md-top-bg">
                     <div id="seize-a-seat-1" class="col-md-2 "></div>
@@ -117,7 +128,7 @@
                                     <div class="md-top-zindex"><img class="second-slide center-block" src="img/bg.jpg" alt="Second slide"/></div>
                                 </div>
                                 <div class="item md-top-img md-top-zindex">
-                                    <div class="md-top-zindex"><img class="second-slide center-block" src="img/seize.jpg" alt="Second slide"/></div>
+                                    <div class="md-top-zindex"><img class="second-slide center-block" src="img/bg-04.jpg" alt="Second slide"/></div>
                                 </div>
                             </div>
                             <a class="left carousel-control md-top-zindex" href="#myCarousel" role="button" data-slide="prev">
@@ -137,51 +148,135 @@
 
         <!--页面主体中部-->
         <div class="main_middle" id="main_middle">
-            <div class="col-md-12 tree_title">
-                <h1><span><img src="img/comment-icon.png" alt=""></span>&ensp;推荐知识树</h1>
+            <div class="tree_title">
+                <h1><span><img src="img/comment-icon.png" alt=""></span>&ensp;推荐知识树<span class="text-muted" onclick="tomorecourse()"> 更多课程</span></h1>
             </div>
             <div id="tree_carousel" class="col-md-12 slide carousel col-xs-12">
                 <div id="carousel_Curtain" class="carousel-inner middle-img-margin" ondragstart="return false">
                     <div class="item active">
                         <div class="col-md-3 col-xs-6 ">
-                            <img src="img/md-bg1.jpg" class="col-md-12 col-xs-12" alt="">
+                            <img src="img/class4.png" class="col-md-12 col-xs-12 col-lg-12" alt="">
+                            <div class="col-md-12 col-xs-12 col-lg-12">
+                                <div class="tree_container">
+                                <div class="col-md-12 col-xs-12">《树之名》</div>
+                                <div>有2堂课程正在进行</div>
+                                <div class="text-muted">这里是关于这棵知识树的详细介绍<br>这里是关于这棵知识树的详细介绍</div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-3 col-xs-6">
-                            <img src="img/md-bg1.jpg"  class="col-md-12 col-xs-12" alt="">
+                            <img src="img/class1.png"  class="col-md-12 col-xs-12" alt="">
+                            <div class="col-md-12 col-xs-12 col-lg-12">
+                                <div class="tree_container">
+                                    <div class="col-md-12 col-xs-12">《树之名》</div>
+                                    <div>有2堂课程正在进行</div>
+                                    <div class="text-muted">这里是关于这棵知识树的详细介绍<br>这里是关于这棵知识树的详细介绍</div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-3 col-xs-6">
-                            <img src="img/md-bg1.jpg" class="col-md-12 col-xs-12" alt="">
+                            <img src="img/class2.jpg" class="col-md-12 col-xs-12" alt="">
+                            <div class="col-md-12 col-xs-12 col-lg-12">
+                                <div class="tree_container">
+                                    <div class="col-md-12 col-xs-12">《树之名》</div>
+                                    <div>有2堂课程正在进行</div>
+                                    <div class="text-muted">这里是关于这棵知识树的详细介绍<br>这里是关于这棵知识树的详细介绍</div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-3 col-xs-6">
-                            <img src="img/md-bg1.jpg" class="col-md-12 col-xs-12" alt="">
+                            <img src="img/class3.png" class="col-md-12 col-xs-12" alt="">
+                            <div class="col-md-12 col-xs-12 col-lg-12">
+                                <div class="tree_container">
+                                    <div class="col-md-12 col-xs-12">《树之名》</div>
+                                    <div>有2堂课程正在进行</div>
+                                    <div class="text-muted">这里是关于这棵知识树的详细介绍<br>这里是关于这棵知识树的详细介绍</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="item ">
                         <div class="col-md-3 col-xs-6 ">
                             <img src="img/md-bg2.jpg" class="col-md-12 col-xs-12" alt="">
+                            <div class="col-md-12 col-xs-12 col-lg-12">
+                                <div class="tree_container">
+                                    <div class="col-md-12 col-xs-12">《树之名》</div>
+                                    <div>有2堂课程正在进行</div>
+                                    <div class="text-muted">这里是关于这棵知识树的详细介绍<br>这里是关于这棵知识树的详细介绍</div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-3 col-xs-6">
                             <img src="img/md-bg2.jpg"  class="col-md-12 col-xs-12" alt="">
+                            <div class="col-md-12 col-xs-12 col-lg-12">
+                                <div class="tree_container">
+                                    <div class="col-md-12 col-xs-12">《树之名》</div>
+                                    <div>有2堂课程正在进行</div>
+                                    <div class="text-muted">这里是关于这棵知识树的详细介绍<br>这里是关于这棵知识树的详细介绍</div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-3 col-xs-6">
                             <img src="img/md-bg2.jpg" class="col-md-12 col-xs-12" alt="">
+                            <div class="col-md-12 col-xs-12 col-lg-12">
+                                <div class="tree_container">
+                                    <div class="col-md-12 col-xs-12">《树之名》</div>
+                                    <div>有2堂课程正在进行</div>
+                                    <div class="text-muted">这里是关于这棵知识树的详细介绍<br>这里是关于这棵知识树的详细介绍</div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-3 col-xs-6">
                             <img src="img/md-bg2.jpg" class="col-md-12 col-xs-12" alt="">
+                            <div class="col-md-12 col-xs-12 col-lg-12">
+                                <div class="tree_container">
+                                    <div class="col-md-12 col-xs-12">《树之名》</div>
+                                    <div>有2堂课程正在进行</div>
+                                    <div class="text-muted">这里是关于这棵知识树的详细介绍<br>这里是关于这棵知识树的详细介绍</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="col-md-3 col-xs-6 ">
                             <img src="img/md-bg1.jpg" class="col-md-12 col-xs-12" alt="">
+                            <div class="col-md-12 col-xs-12 col-lg-12">
+                                <div class="tree_container">
+                                    <div class="col-md-12 col-xs-12">《树之名》</div>
+                                    <div>有2堂课程正在进行</div>
+                                    <div class="text-muted">这里是关于这棵知识树的详细介绍<br>这里是关于这棵知识树的详细介绍</div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-3 col-xs-6">
                             <img src="img/md-bg1.jpg"  class="col-md-12 col-xs-12" alt="">
+                            <div class="col-md-12 col-xs-12 col-lg-12">
+                                <div class="tree_container">
+                                    <div class="col-md-12 col-xs-12">《树之名》</div>
+                                    <div>有2堂课程正在进行</div>
+                                    <div class="text-muted">这里是关于这棵知识树的详细介绍<br>这里是关于这棵知识树的详细介绍</div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-3 col-xs-6">
                             <img src="img/md-bg1.jpg" class="col-md-12 col-xs-12" alt="">
+                            <div class="col-md-12 col-xs-12 col-lg-12">
+                                <div class="tree_container">
+                                    <div class="col-md-12 col-xs-12">《树之名》</div>
+                                    <div>有2堂课程正在进行</div>
+                                    <div class="text-muted">这里是关于这棵知识树的详细介绍<br>这里是关于这棵知识树的详细介绍</div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-3 col-xs-6">
                             <img src="img/md-bg1.jpg" class="col-md-12 col-xs-12" alt="">
+                            <div class="col-md-12 col-xs-12 col-lg-12">
+                                <div class="tree_container">
+                                    <div class="col-md-12 col-xs-12">《树之名》</div>
+                                    <div>有2堂课程正在进行</div>
+                                    <div class="text-muted">这里是关于这棵知识树的详细介绍<br>这里是关于这棵知识树的详细介绍</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <a class="right carousel-control" href="#tree_carousel" role="button" data-slide="next">

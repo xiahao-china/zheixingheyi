@@ -1,0 +1,103 @@
+input{
+    border: 0px;
+    font-size:18px;
+    border-radius: 5px;
+    padding-left: 5px!important;
+}
+textarea{
+    height: 100px;
+    border: 0px;
+    font-size: 20px;
+}
+h5{
+    margin-left: 20px;
+}
+.Mybody{
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.Mybody>div{
+    height: 0;
+    border: 1px solid white;
+    transition: all 0.5s;
+    overflow: hidden;
+    box-shadow: #c0c0c0 2px 2px 1px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+}
+
+.Mybody>div div{
+    transition: all 1s;
+    opacity: 0;
+    left: -200px;
+}
+.Mybody>div div{
+    margin: 30px 50px 20px 50px;
+}
+.Mybody>div div:first-child{
+     margin: 0;
+ }
+#HeadImg{
+    margin: 0px;
+}
+#HeadImg label{
+    position: relative;
+    margin: 20px 0px 20px 50px;
+    display: inline-block;
+}
+#HeadImg div{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin-top: 30px;
+    overflow: hidden;
+    border-radius: 50px;
+    display: inline-block;
+}
+#HeadImg div img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
+#HeadImg div span{
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.7;
+    color: white;
+    left: 0;
+    right: 0;
+    padding-bottom: 5px;
+}
+
+#OpationInformation{
+     margin-top: 20px;
+    font-size: large;
+    opacity: 1;
+    left: 0px;
+ }
+#Navigation{
+    border: 1px solid #bdc3c7;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 10px;
+
+    position: relative;
+}
+#Navigation span{
+    position: absolute;
+    top: -10px;
+    background-color: white;
+    font-size: medium;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#PutInformation{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    display: none;
+    font-size: 20px;
+}
+

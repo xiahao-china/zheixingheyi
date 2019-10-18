@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+#all-bodys{
+ width: 100%;
+ background: url("../img/126.jpg") repeat;
+ background-size: 100% 100%;
+}
+.body-header-h3{
+	font-size: 50px;
+}
+.body-input{
+	/*margin-left: 10%;*/
+}
+.body-input1{
+ position: relative;
+ padding: 10px;
+ font-size: 25px;
+ color:#479AF6;
+ float: right;
+}
+.body-input2{
+ float: right;
+ position: relative;
+ padding: 10px;
+ font-size: 25px;
+ color:#479AF6;
+}
+.select{
+ width: 200px;
+ background-color: ghostwhite;
+ height: 50px;
+}
+option{
+ margin: 3px;
+}
+#body-brief{
+ width: 100%;
+ margin-right: -18%;
+
+}
+.brief{
+ font-size: 30px;
+ color:#479AF6;
+ margin-left: 100px;
+ margin-top: 50px;
+}
+.text-title{
+font-size: 30px;
+}
+.brief-text{
+ font-size: 20px;
+ font-weight: normal;
+}
+/*.form-group{*/
+ /*width: 100%;*/
+/*}*/
+/*.form-text{*/
+ /*margin: 0px auto;*/
+/*}*/
+.form-group1{
+ padding-left: 100px;
+    padding-top: 10px;
+    color:#479AF6;
+    font-size: 18px;
+}
+#imgup{
+ width: 200px;
+}
+#btnSubmit{
+ float: right;
+ position: relative;
+ bottom: 0px;
+}

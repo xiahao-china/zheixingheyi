@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>manage</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/manage.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<!--页头部分-->
+<div id="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 col-sm-9 col-xs-9">
+                <img class="img-circle header-img header-set" src="img/seize.jpg" />
+                <h1 class="header-set header-h1-set"><b>"知行合一"智能助学</b></h1>
+                <embed src="svg/tree.svg" class="tree"/>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-3 continer">
+             <embed class="svg1" src="svg/修改个人头像.svg">
+			<div class="hide-div">
+			<ul class="list-group">
+            <li class="list-group-item"><a class="hide-li" href="#">我的课程</a></li>
+            <li class="list-group-item"><a class="hide-li" href="#">个人设置</a></li>
+            <li class="list-group-item"><a class="hide-li" href="#">退出登录</a></li>
+             </ul>
+			<!--<button type="button" class="btn btn-info">我的课程</button>
+			<button type="button" class="btn btn-info">个人设置</button>
+			<a href="#">退出登录</a>-->	
+			</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--页面主体-->
+<div id="middle">
+<div class="middle-head">
+<p class="middle-title">课程列表</p>
+<button type="button" class="btn styBtn middle-btn" ><a href="Add Course.html">添加课程</a></button>
+</div>
+<div>
+<table class="table course-table">
+  <thead class="table-head">
+    <tr>
+      <th>课程名</th>
+      <th>课程简介</th>
+	  <th>课程分类</th>
+      <th>课程操作</th>
+    </tr>
+  </thead>
+  <tbody class="table-body" id="tbody">
+    <tr class="hide-tr">
+      <td>Tanmay</td>
+      <td>Bangalore</td>
+	  <td>Tanmay</td>
+      <td>
+     <div class="hidebtn">
+         <button class="btn styBtn btn-mo" data-toggle="modal" data-target="#Modal">
+             课程编写
+         </button>
+       <div class="hide-btn">
+           <button type="button" class="btn styBtn">课程树编写</button>
+         <button type="button" class="btn styBtn">删除</button>
+         <button type="button" class="btn styBtn">发布</button>
+       </div>
+     </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Sachin</td>
+      <td>Mumbai</td>
+	  <td>Tanmay</td>
+      <td>Bangalore</td>
+    </tr>
+	  <tr>
+      <td>Tanmay</td>
+      <td>Bangalore</td>
+	  <td>Tanmay</td>
+      <td>Bangalore</td>
+    </tr>
+    <tr>
+      <td>Sachin</td>
+      <td>Mumbai</td>
+	  <td>Tanmay</td>
+      <td>Bangalore</td>
+    </tr>
+	  <tr>
+      <td>Tanmay</td>
+      <td>Bangalore</td>
+	  <td>Tanmay</td>
+      <td>Bangalore</td>
+    </tr>
+    <tr>
+      <td>Sachin</td>
+      <td>Mumbai</td>
+	  <td>Tanmay</td>
+      <td>Bangalore</td>
+    </tr>
+	  <tr>
+      <td>Sachin</td>
+      <td>Mumbai</td>
+	  <td>Tanmay</td>
+      <td>Bangalore</td>
+    </tr>
+	  <tr>
+      <td>Sachin</td>
+      <td>Mumbai</td>
+	  <td>Tanmay</td>
+      <td>Bangalore</td>
+    </tr>
+	  <tr>
+      <td>Sachin</td>
+      <td>Mumbai</td>
+	  <td>Tanmay</td>
+      <td>Bangalore</td>
+    </tr>
+	
+	  <tr>
+      <td>Sachin</td>
+      <td>Mumbai</td>
+	  <td>Tanmay</td>
+      <td>Bangalore</td>
+    </tr>
+	  <tr>
+      <td>Sachin</td>
+      <td>Mumbai</td>
+	  <td>Tanmay</td>
+      <td>Bangalore</td>
+    </tr>
+	 <tr>
+      <td>Sachin</td>
+      <td>Mumbai</td>
+	  <td>Tanmay</td>
+      <td>Bangalore</td>
+    </tr>
+	 <tr>
+      <td>Sachin</td>
+      <td>Mumbai</td>
+	  <td>Tanmay</td>
+      <td>Bangalore</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+	<div id="pag">
+<ul class="pagination foot-pag" >
+    <li><a href="#" class="lia">&laquo;</a></li>
+    <li><a href="#" class="lia">1</a></li>
+    <li><a href="#" class="lia">2</a></li>
+    <li><a href="#" class="lia">3</a></li>
+    <li><a href="#" class="lia">4</a></li>
+    <li><a href="#" class="lia">5</a></li>
+    <li><a href="#">&raquo;</a></li>
+</ul>
+</div>
+
+</div>
+
+<!--
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <form method="post">
+                    课程简介：<br/>
+                    <textarea rows="7" cols="50"></textarea>
+                    <div class="form-group">
+                        <label for="inputfile">图片上传</label>
+                        <input type="file" id="inputfile">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                </button>
+                <button type="button" class="btn btn-info">
+                    提交更改
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+</body>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/AboutTree.js"></script>
+<script src="js/manage.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/main.js"></script>
+
+</html>

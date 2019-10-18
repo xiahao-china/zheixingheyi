@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>知识树详情</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./src/kmsjsmap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/tree_user.css">
+</head>
+<body>
+<div id="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 col-sm-9 col-xs-9" onclick="window.location.href='index.html'">
+                <img class="img-circle header-img header-set" src="img/logo.png" />
+                <h1 class="header-set header-h1-set"><b>"知行合一"智能助学</b></h1>
+                <embed src="svg/tree.svg" class="tree"/>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-3 ">
+                <table>
+                    <tr class="logined">
+                        <td class="header-delive header-td">
+                            <a class="btn header-btn-set btn-login" href="login.html"><h3 class="header-h3-set"><b onclick="tologin()">登录</b></h3></a>
+                        </td>
+                        <td class="header-td"><a class="btn header-btn-set" href="regist.html"><h3 class="header-h3-set"><b>注册</b></h3></a></td></tr>
+                        <!--<td>-->
+                            <!--<embed src="svg/student-b.svg">-->
+                        <!--</td>-->
+                        <!--<td>-->
+                            <!--<div class="dropdown">-->
+                                <!--<button class="btn dropdown-toggle" data-toggle="collapse" data-target="#MyselfInformation">欢迎您:xxxxx <span class="glyphicon caret"></span></button>-->
+                                <!--<ul id="MyselfInformation" class="collapse list-group">-->
+                                    <!--<li class="list-group-item">个人空间<span class="badge">0</span></li>-->
+                                    <!--<li class="list-group-item">学习计划</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</td>-->
+                    <tr><td colspan="2"><input id="find" type="text" onclick="clear_text('find')" class="form-control input-sm find-style pull-left" placeholder="搜索你感兴趣的知识"/></td><td><img class="enlarge pull-left" src="img/enlarge.png" /></td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="tree_body col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div id="tree_container">
+
+            </div>
+            <!--<div id="CourseName">-->
+                <!--<img class="img-circle" src="img/book.png">-->
+                <!--<h5 class="text-muted">项目经理基础-XXX大学</h5>-->
+            <!--</div>-->
+        </div>
+    </div>
+<div class="main_bg bg-left1"></div>
+<div class="main_bg bg-right1"></div>
+<div class="DynamicBackground">
+
+</div>
+<div id="tree">
+    <ul id="myTab" class="nav nav-tabs">
+        <li class="active">
+            <a class="tree-detlie" href="#home" data-toggle="tab">知识树详情</a>
+        </li>
+        <li><a class="tree-detlie" href="#ios" data-toggle="tab">知识树评价</a></li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="home">
+            <p class="tree-p">菜鸟教程是一个提供最新的web技术站点，本站免费提供了建站相关的技术文档，帮助广大web技术爱好者快速入门并建立自己的网站。<br/>菜鸟先飞早入行——学的不仅是技术，更是梦想。iOS 是一个由苹果公司开发和发布的手机操作系统。<br/>最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple TV。iOS 派生自 OS X，它们共享 Darwin 基础。<br/>OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            </p>
+        </div>
+        <div class="tab-pane fade" id="ios">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <ul id="list1">
+                        <li class="box_1"></li>
+                        <li class="box_1"></li>
+                        <li class="box_1"></li>
+                        <li class="box_1"></li>
+                        <li class="box_1"></li>
+                    </ul><br/><br/>
+                    <p class="tree-p1">
+                        某某：免费域名注册们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本
+                    </p></li>
+                <li class="list-group-item tree-p"> <ul id="list1">
+                    <li class="box_1"></li>
+                    <li class="box_1"></li>
+                    <li class="box_1"></li>
+                    <li class="box_1"></li>
+                    <li class="box_1"></li>
+                </ul><br/><br/>
+                    <p class="tree-p1">
+                        某某：免费域名注册们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本
+                    </p></li>
+                <li class="list-group-item tree-p"> <ul id="list1">
+                    <li class="box_1"></li>
+                    <li class="box_1"></li>
+                    <li class="box_1"></li>
+                    <li class="box_1"></li>
+                    <li class="box_1"></li>
+                </ul><br/><br/>
+                    <p class="tree-p1">
+                        某某：免费域名注册们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本
+                    </p></li>
+                <li class="list-group-item tree-p"> <ul id="list1">
+                    <li class="box_1"></li>
+                    <li class="box_1"></li>
+                    <li class="box_1"></li>
+                    <li class="box_1"></li>
+                    <li class="box_1"></li>
+                </ul><br/><br/>
+                    <p class="tree-p1">
+                        某某：免费域名注册们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本
+                    </p></li>
+                <li class="list-group-item tree-p"> <ul id="list1">
+                    <li class="box_1"></li>
+                    <li class="box_1"></li>
+                    <li class="box_1"></li>
+                    <li class="box_1"></li>
+                    <li class="box_1"></li>
+                </ul><br/><br/>
+                    <p class="tree-p1">
+                        某某：免费域名注册们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本
+                    </p></li>
+            </ul>
+            <!--<form class="bs-example bs-example-form" role="form">
+                   <div class="col-lg-6">
+                       <div class="input-group">
+                           <input type="text" class="form-control">
+                           <span class="input-group-btn">
+                               <button class="btn btn-default" type="button">评论</button>
+                           </span>
+                       </div>
+                   </div>
+           </form>/.col-lg-6 -->
+            <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                开始评论
+            </button>
+            <!-- 模态框（Modal） -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <textarea rows="30" cols="75" class="input-text"></textarea><br/>
+                            <div id="box">
+                                <span>总分评价：</span>
+                                <ul id="list">
+                                    <li class="box_1"></li>
+                                    <li class="box_1"></li>
+                                    <li class="box_1"></li>
+                                    <li class="box_1"></li>
+                                    <li class="box_1"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                                确定评论
+                            </button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="container">
+        <div class="left">
+            <div class="col-md-6 col-xs-12 ">
+                <div class="footer_item">
+                    <p><span><i class="glyphicon glyphicon-copyright-mark"></i>&nbsp;Copyright:广东海洋大学创数软件团队</span>
+                </div>
+                <div class="footer_item">
+                    <p><span><i class="glyphicon glyphicon-map-marker"></i>&nbsp;Adress:</span>广东省湛江市麻章区湖光镇海大路1号<br>广东海洋大学钟海楼A04008</p>
+                </div>
+                <div class="footer_item">
+                    <p><span><i class="glyphicon glyphicon-envelope"></i>&nbsp;Postal Code:524088</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5  col-md-offset-1 ">
+            <div class="right">
+                <div class="footer_logo">
+                    <a href="#"><img src="img/eximg.jpg" alt="">“知行合一”智能助学</a>
+                </div>
+                <br><p>给热爱学习的你一个学习的平台和一条成功的道路</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="PlayVideo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">~视频学习~</h4>
+            </div>
+
+            <div class="modal-body">
+                    <video controls>
+                        <source src="video/video_3.MP4">
+                    </video>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">关闭视频</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+</body>
+<script src="js/jquery-3.1.1.min.js" ></script>
+<script src="./lib/jquery.min.js"></script>
+<script src="js/bootstrap.js" ></script>
+<script src="./src/kmsjsmap.js" type="text/javascript"></script>
+<script src="./src/zxx.drag.1.0.js" type="text/javascript"></script>
+<script src="js/tree_user.js" ></script>
+
+</html>

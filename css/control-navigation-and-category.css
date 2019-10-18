@@ -1,0 +1,337 @@
+body{
+    overflow-x: hidden;
+}
+.sethidden{
+    display: none;
+}
+.margin-right{
+    margin-right: 10px;
+}
+.margin-bottom{
+    margin-bottom: 10px;
+}
+.result_set table{
+    border-color: white!important;
+}
+.change_information_lotmsg{
+    color: white;
+    font-size: x-small;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: red;
+}
+.bg-img-full{
+    position: fixed;
+    height: 100%;
+    margin: 0;
+}
+.control-body{
+    height: 680px;
+}
+.delive{
+    margin-bottom: 20px;
+}
+.header-title{
+    border-bottom: white 1px solid;
+    box-shadow: white;
+}
+.control-head-set{
+    color: white;
+}
+.bar{
+    width: 35px;
+    height: 35px;
+}
+.control-head-set div ul li a{
+    color: white;
+    font-size: larger;
+}
+.dropdown-menu li a{
+    color: black!important;
+}
+.welcome_set{
+    font-size: larger;
+    color: white;
+    font-weight: bold;
+    height: 150px;
+}
+.welcome_set button{
+    margin: 10px;
+}
+.ab_center{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin: auto;
+}
+.right_bottom{
+    right: 0;
+    bottom: 0;
+    height: 70px;
+    width: 70px;
+    position: fixed;
+}
+
+.right_bottom_three{
+    right: 0;
+    bottom: 0;
+    height: 170px;
+    width: 170px;
+    position: absolute;
+    z-index: 1;
+}
+.right_bottom_gear{
+    right: 0;
+    bottom: 0;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    margin: 7px;
+    transition: 2s;
+    z-index: 2;
+}
+.right_bottom_gear:hover{
+    transform: rotate(560deg);
+}
+.tohome{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 70px;
+    width: 70px;
+    transition: 1s;
+    z-index: 0;
+}
+.right_bottom:hover .tohome{
+    right: 70px;
+    bottom: 70px;
+    z-index: 2;
+}
+.panel_detail{
+    list-style: none;
+    border: white 1px solid;
+    border-radius: 5px;
+}
+.panel_detail li{
+    padding-bottom: 5px;
+}
+.operation_box{
+    border:1px solid white;
+    padding: 10px;
+}
+.operation_box button{
+    margin-top:15px;
+    float: right;
+}
+.table_thead{
+    display: none;
+}
+
+
+
+
+.line_detail{
+    text-decoration: white;
+    color: white;
+}
+.line_detail div{
+    display: none;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    border: black 1px solid;
+    padding: 10px;
+    position: absolute;
+    width: 50%;
+    opacity: 0.7;
+}
+.line_detail div table tbody tr{
+    border-top:#c0c0c0 1px solid;
+}
+.line_detail div table{
+    width: 100%;
+}
+.line_detail:hover div{
+    display: block;
+}
+.op_tree {
+}
+.op_tree button {
+    color: white;
+    border: white 1px solid;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0);
+    margin: 14px;
+    font-size: small;
+    transition: font-size 1s;
+    transition: background-color 1s;
+    transition: border-top-color 200ms;
+    transition: border-bottom-color 200ms;
+    transition: border-right-color 200ms;
+    transition: border-left-color 200ms;
+
+}
+.op_tree select{
+    color: white;
+    border: white 1px solid;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0);
+    margin: 14px;
+    font-size: small;
+    transition: font-size 1s;
+    transition: background-color 1s;
+    transition: border-top-color 200ms;
+    transition: border-bottom-color 200ms;
+    transition: border-right-color 200ms;
+    transition: border-left-color 200ms;
+
+}
+.op_tree button:hover {
+    font-size:14px;
+    color: white;
+    border: #1fcd98 1px solid;
+    background-color: #1fcd98;
+}
+
+.op_tree select:hover{
+    font-size:14px;
+    color: white;
+    border: #1fcd98 1px solid;
+
+    font-size: small;
+}
+option{
+    border: solid 1px white;
+    border-radius: 10px;
+    color: black;
+    background-image: url("../img/SelectBG.png");
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+}
+select{
+    border: solid 1px white;
+    background-image: url("../img/SelectBG.png");
+}
+
+#uploadfile>div{
+    height: 30px;
+    background-color: white;
+    border: 1px #c0c0c0 solid;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+#progress{
+    height: 30px;
+    display: inline-block;
+    background-color: #1fcd98;
+    border-radius: 15px;
+    text-align: center;
+    width: 0%;
+}
+@media screen and (max-width: 770px) {
+    .media-find-sm-right{
+        float: right;
+        top:5px;
+        margin-right: 0px!important;
+        border: white 1px solid;
+        border-radius: 5px;
+    }
+    .right_bottom_three{
+        height: 100px;
+        width: 100px;
+    }
+    .right_bottom_gear{
+        height: 40px;
+        width: 40px;
+    }
+    .right_bottom{
+        height: 40px;
+        width: 40px;
+    }
+    .tohome{
+        height: 40px;
+        width: 40px;
+    }
+    .right_bottom:hover .tohome{
+        right: 45px;
+        bottom: 45px;
+    }
+}
+/*!**!————————————————————————————————————————————————————————————————————————————————————*/
+    .tree_body{
+        position: relative;
+        height: 600px;
+        padding-top: 50px;
+        margin-bottom:30px;
+    }
+    .tree_body div{
+        padding: 0px;
+    }
+#tree_container{
+    position: relative;
+    height: 500px;
+    top: 0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border: 1px white solid;
+
+}
+#tree_container div{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+#footer{
+    box-shadow: 0px -5px 10px  #adadad;
+}
+
+.lui-jsmind-innerToolBar ul li{
+    height: 25px;
+    width: 25px;
+    margin-left: 5px;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+    padding-bottom: 2.5px;
+    opacity: 0.5;
+    background-repeat: no-repeat;
+}
+.lui-jsmind-innerToolBar ul li:first-child{
+    background-image: url("../img/reduction.png");
+}
+.lui-jsmind-innerToolBar ul li:nth-child(2){
+    background-image: url("../img/enlarger.png");
+}
+.lui-jsmind-innerToolBar ul li:nth-child(3){
+    background-image: url("../img/narrow.png");
+    border-bottom: 1px solid #adadad;
+}
+.lui-jsmind-innerToolBar ul li:nth-child(4){
+    background-image: url("../img/photo.png");
+}
+.lui-jsmind-innerToolBar ul{
+    height: 120px;
+    padding-top: 5px;
+    border-radius: 4px;
+    opacity: 0.5;
+}
+.lui-jsmind-innerToolBar li:hover{
+    opacity: 1;
+}
+.lui-jsmind-innerToolBar ul:hover{
+    opacity: 1;
+}
+.lui-jsmind-innerToolBar{
+    width: 30px!important;
+}
+@media screen and (min-width:960px ) {
+    .tree_body{
+        border-radius: 20px;
+    }
+}

@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.nav_bar{
+    width: 80%;
+    margin: 0px auto;
+    position: relative;
+    top: 30px;
+}
+.bar{
+    font-size: 25px;
+    padding-top: 5px;
+}
+.bar-one,.bar-two{
+      font-size: 20px;
+  }
+.butt{
+    padding-top: 10px;
+}
+.body-img{
+    width: 80%;
+    margin: 0px auto;
+    position: relative;
+    top: 50px;
+    padding-bottom: 80px;
+}
+.img{
+    width: 90%;
+    margin: 0px auto;
+    border-radius: 20px;
+}
+.img-font{
+    font-size: 23px;
+    padding-top: 10px;
+    color: black;
+}
+.img-det{
+    font-size: 18px;
+    color: #adadad;
+}

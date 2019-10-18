@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/Detlie.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/Detlie.js"></script>
+</head>
+<body>
+<!--页头部分-->
+<div id="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 col-sm-9 col-xs-9" onclick="window.location.href='index.html'">
+                <img class="img-circle header-img header-set" src="img/logo.png" />
+                <h1 class="header-set header-h1-set"><b>"知行合一"智能助学</b></h1>
+                <embed src="svg/tree.svg" class="tree"/>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-3 ">
+                <table>
+                    <tr class="logined">
+                        <td class="header-delive header-td">
+                            <a class="btn header-btn-set btn-login" data-toggle="modal" data-target="#login"><h3 class="header-h3-set"><b onclick="tologin()">登录</b></h3></a>
+                            <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">欢迎登录</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="form-inline">
+                                                <embed src="svg/account.svg" class="login_svg" />
+                                                <input class="form-control login_input_set" type="text" id="login_account" name="login_account"  onblur="check_account('login_account','login_account_check_end')" placeholder="请输入账号"/><span class="prompt_box" id="login_account_check_end"></span><br /><br />
+                                                <h4 id="disregist"><small>没账号?<a href="regist.html">去注册</a></small></h4><br />
+                                                <embed src="svg/key.svg" class="login_svg" />
+                                                <input class="form-control login_input_set" type="text" id="login_account_key" name="login_account_key" onclick="clear_text('login_account_key')" onblur="check_account_key('login_account_key','login_account_key_end')" placeholder="请输入密码" /><span class="prompt_box" id="login_account_key_end"></span><br /><br />
+                                                <h4 id="forget"><small><a href="#">忘记密码?</a></small></h4><br />
+                                                <embed src="svg/verification.svg" class="login_svg" />
+                                                <input class="form-control login_input_vp_set" type="text" id="login_check" name="login_check" onclick="clear_text('login_check')" onblur="check_Verification_code('login_check','verification_check_end')" placeholder="请输入验证码"/><span class="prompt_box" id="verification_check_end"></span>
+                                                <span class="Verification_position" ><img class="pull-left" id="canvase" width="120" height="45" src="http://47.107.137.51:8002/admin/server/code/image"></span><br /><br />
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" onclick="login()">登录</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                        </div>
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal -->
+                            </div>
+                        </td>
+                        <td class="header-td"><a class="btn header-btn-set" href="regist.html"><h3 class="header-h3-set"><b>注册</b></h3></a></td></tr>
+                    <tr>
+                        <td colspan="2">
+                        <input id="find" type="text" class="form-control input-sm find-style pull-left" placeholder="搜索你感兴趣的知识"/>
+                    </td>
+                        <td>
+                           <!-- <button id="img-search" class="enlarge pull-left">搜索</button>-->
+                            <img  onclick=aa(); class="enlarge pull-left" src="img/enlarge.png" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 页面主体部分-->
+<div class="nav_bar">
+<ul class="nav nav-pills">
+    <li class="bar">分类:</li>
+    <li class="bar-one"><a href="#" class="a-one">Home</a></li>
+    <li class="bar-one"><a href="#" class="a-one">SVN</a></li>
+    <li class="bar-one"><a href="#" class="a-one">iOS</a></li>
+    <li class="bar-one"><a href="#" class="a-one">VB.Net</a></li>
+    <li class="bar-one"><a href="#" class="a-one">Java</a></li>
+    <li class="bar-one"><a href="#" class="a-one">PHP</a></li>
+</ul>
+    <ul class="nav nav-pills">
+        <li class="bar">方向:</li>
+        <li class="bar-two"><a href="#" class="a-two">Home</a></li>
+        <li class="bar-two"><a href="#" class="a-two">SVN</a></li>
+        <li class="bar-two"><a href="#" class="a-two">iOS</a></li>
+        <li class="bar-two"><a href="#" class="a-two">VB.Net</a></li>
+        <li class="bar-two"><a href="#" class="a-two">Java</a></li>
+        <li class="bar-two"><a href="#" class="a-two">PHP</a></li>
+    </ul>
+    <div class="butt">
+    <button type="button" class="btn btn-info">最新</button>
+    <button type="button" class="btn btn-info">最热</button>
+    </div>
+</div>
+<div class="body-img">
+<div class="row couse">
+<div class="col-md-3 col-sm-3 col-xs-3 ">
+   <img class="img" src="img/md-bg1.jpg" />
+    <a class="img-font">JavaScript高级</a>
+    <p class="img-det">按此我的话全部哪些会全为汉</p>
+</div>
+    <div class="col-md-3 col-sm-3 col-xs-3 ">
+        <img class="img" src="img/md-bg1.jpg" />
+        <a class="img-font">JavaScript高级</a>
+        <p class="img-det">按此我的话全部哪些会全为汉</p>
+    </div>
+    <div class="col-md-3 col-sm-3 col-xs-3 ">
+        <img class="img" src="img/md-bg1.jpg" />
+        <a class="img-font">JavaScript高级</a>
+        <p class="img-det">按此我的话全部哪些会全为汉</p>
+    </div>
+    <div class="col-md-3 col-sm-3 col-xs-3 ">
+        <img class="img" src="img/md-bg1.jpg" />
+        <a class="img-font">JavaScript高级</a>
+        <p class="img-det">按此我的话全部哪些会全为汉</p>
+    </div>
+</div>
+</div>
+<!-- 页脚部分-->
+<div id="footer">
+    <div class="container">
+        <div class="left">
+            <div class="col-md-6 col-xs-12 ">
+                <div class="footer_item">
+                    <p><span><i class="glyphicon glyphicon-copyright-mark"></i>&nbsp;Copyright:广东海洋大学创数软件团队</span>
+                </div>
+                <div class="footer_item">
+                    <p><span><i class="glyphicon glyphicon-map-marker"></i>&nbsp;Adress:</span>广东省湛江市麻章区湖光镇海大路1号<br>广东海洋大学钟海楼A04008</p>
+                </div>
+                <div class="footer_item">
+                    <p><span><i class="glyphicon glyphicon-envelope"></i>&nbsp;Postal Code:524088</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5  col-md-offset-1 ">
+            <div class="right">
+                <div class="footer_logo">
+                    <a href="#"><img src="img/eximg.jpg" alt="">“知行合一”智能助学</a>
+                </div>
+                <br><p>给热爱学习的你一个学习的平台和一条成功的道路</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

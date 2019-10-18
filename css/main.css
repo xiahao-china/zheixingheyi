@@ -1,5 +1,9 @@
 ﻿@charset "UTF-8";
 
+body{
+    background-color: #f6f6f6;
+    overflow-x: hidden;
+}
 
 /*头部*/
 #header{
@@ -15,7 +19,20 @@
     box-shadow: 0 0 15px rgba(0,0,0,0.15);
 }
 
-
+.logined embed{
+    width: 35px;
+    height: 35px;
+}
+.logined button{
+    background-color: rgba(0,0,0,0);
+    border-top: 1px solid #bdc3c7;
+    border-bottom: 1px solid #bdc3c7;
+}
+#MyselfInformation{
+    position: absolute;
+    z-index: 5;
+    width: 150px;
+}
 .header-delive
 {
     border-right-style:solid;
@@ -24,8 +41,9 @@
 }
 .header-img
 {
-    width:50px;
-    height:50px;
+    width:68px;
+    height:68px;
+    margin:0px 0px 0px 0px!important;
 }
 .header-set
 {
@@ -107,7 +125,7 @@
 {
     height:40px;
     width:40px;
-    background-color:#999999;
+    background-color:#204d74;
     border-bottom-right-radius:15px;
     z-index:12;
 }
@@ -117,13 +135,56 @@ a:hover, a:focus
 }
 .mobile-nav ul li a
 {
-    color: gray;
+    color: white;
     display: block;
     padding: 1em 5%;
     border-top: 1px solid #4f4f4f;
     border-bottom: 1px solid #292929;
     transition: all 0.2s ease-out;
     cursor: pointer;
+}
+.dropdown-header{
+    color: white;
+}
+.tree_container{
+    position: relative;
+    /*height: 150px;*/
+    z-index: 10;
+    float: left;
+    padding-left: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom:  #c0c0c0 1px solid;
+    border-left:  #c0c0c0 1px solid;
+    border-right:  #c0c0c0 1px solid;
+}
+.tree_container div:nth-child(1){
+    padding-top: 7px;
+    font-size: large;
+    /*height:30px;*/
+}
+.tree_container div:nth-child(2){
+    /*height: 25px;*/
+    font-size: medium;
+    color:#67b168;
+    position: relative;
+    float: left;
+    padding: 5px 5px 5px 20px;
+    width: 100%;
+}
+.tree_container div:nth-child(3){
+    /*height:145px;*/
+    width: 100%;
+    padding: 10px 10px 10px 20px;
+    position: relative;
+    float: left;
+}
+.item div img{
+    position: relative;
+}
+.item div div {
+    padding-left: 0px;
+    padding-right: 10px;
 }
 #mobile-menu
 {
@@ -198,13 +259,16 @@ a:hover, a:focus
 .header-btn-set
 {
     padding:5px 15px 5px 15px;
-    color: #8c8c8c;
+    color: #23A1F6;
     height:40px;
     padding:0px 15px;
+    transition: font-size 0.3s;
 }
 
 .header-btn-set:hover{
-    color: #23A1F6;
+    background-color: #70d217;
+    color: white;
+    font-size: larger;
 }
 
 .tree
@@ -293,7 +357,7 @@ a:hover, a:focus
 }
 
 .main{
-    background-color: #f6f6f6;
+
     margin:0 1px 5px 1px;
     padding-bottom: 30px;
 }
@@ -429,6 +493,68 @@ a:hover, a:focus
     padding-left:0px;
     padding-right:10px;
 }
+
+.left_type_moreinformation{
+    position: absolute;
+    left:100%;
+    border: 1px solid #c0c0c0;
+    background-color: white;
+    border-top-right-radius:10px ;
+    border-bottom-right-radius:10px ;
+    display: none;
+
+}
+.small_type{
+    height: 40px;
+    margin: 5px;
+    border-radius: 3px;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+
+}
+.small_top_type{
+    height: 40px;
+    margin: 5px;
+    border-radius: 3px;
+    font-size: large;
+    font-weight: bold;
+    padding: 5px;
+    color: black;
+    color: rgba(114,114,114,0.57);
+    box-shadow:-10px 15px 5px -11px rgba(114,114,114,0.57);
+}
+.tree_title{
+    width: 100%;
+    padding:0 15px 5px 15px;
+}
+.tree_title span:nth-child(2){
+    padding-top:5px ;
+    font-size: large;
+    transition: all 0.2s ease-out;
+}
+.tree_title span:nth-child(2):hover{
+    font-size: 20px;
+}
+.main_bg{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border:300px rgba(0,0,0,0) solid;
+    z-index: -1;
+}
+.bg-left1{
+    left:0;
+    border-left-color: #ec971f;
+}
+.bg-right1{
+    right: 0;
+    top: 600px;
+    border-right-color: #1fcd98;
+}
+
+/*——————————————————————————————————————————————————————————————————————————*/
 @media screen and (max-width:960px) {
     .left-navigation
     {
@@ -454,11 +580,22 @@ a:hover, a:focus
     {
         padding:0px;
     }
-}
-@media screen and (max-width:960px){
-    
+    .left_type_moreinformation{
+        width: 300px;
+    }
     .main_middle
     {
         position:relative;
     }
+    .bg-left2{
+        left:0px;
+        top:1200px;
+        border-left-color: #ec971f;
+    }
+}
+@media screen and (min-width:960px){
+    .left_type_moreinformation{
+        width: 600px;
+    }
+
 }

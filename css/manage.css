@@ -1,0 +1,84 @@
+/* CSS Document */
+ul,li{
+	
+}
+#middle{
+	width: 100%;
+	/*margin: 0px auto;*/
+    height: 80%;
+	background: url(../img/z549.jpg) no-repeat;
+	background-size:100% 100%;
+	/*opacity:0.9;*/
+}
+.middle-title{
+	font-size: 50px;
+	color:black;
+	padding-top: 20px;
+	padding-left: 120px;
+	font-family: "Adobe 仿宋 Std R";
+}
+.course-table{
+width: 80%;
+margin: 80px auto;
+/*padding-left:65px;*/
+padding-bottom: 100px;
+}
+.table-head{
+ font-size: 25px;
+}
+.table-body{
+	font-size: 20px;
+}
+.middle-btn{
+	float: right;
+	position: relative;
+	bottom: 60px;
+	right: 300px;
+    font-size: 20px;
+}
+.svg1{
+	width: 80px;
+}
+.continer{
+ 
+}
+.continer div{
+	display: none;
+}
+.continer:hover div{
+	display: block;
+}
+.hide-div{
+ width: 200px;
+ position: absolute;
+}
+.hide-li{
+  font-size: 20px;
+  color: #4F72E8;
+}
+.hide-tr td:nth-child(4){
+	position: relative!important;
+}
+.hide-btn{
+	float: right;
+    position: absolute;
+	left: 90px;
+	width:350px;
+	top: 8px;
+}
+.btn-mo{
+	/*float: right;
+	position:absolute;
+    top: -35px;*/
+}
+#pag{
+text-align:center;
+position: relative;
+bottom: 50px;
+}
+.styBtn{
+	background-color: ghostwhite;
+	border: lightslategrey solid 1px;
+	color: lightslategrey;
+}
+
